@@ -4,7 +4,7 @@ import { Eye, EyeOff, LogIn } from "lucide-react";
 import { toast } from "react-toastify";
 
 import { useAuth } from "../context/AuthContext";
-import "../styles/auth.css";
+import "../styles/Auth.css";
 
 const Login = () => {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { LockKeyhole, Mail, KeyRound } from "lucide-react";
 import { toast } from "react-toastify";
 
 import api from "../services/api";
-import "../styles/auth.css";
+import "../styles/Auth.css";
 
 
 const ForgotPassword = () => {

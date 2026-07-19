@@ -5,7 +5,7 @@ import {
   Clock,
 } from "lucide-react";
 
-import "../styles/contact.css";
+import "../styles/Contact.css";
 
 const Contact = () => {
   return (

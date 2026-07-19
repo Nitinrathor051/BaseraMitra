@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 
 import logo from "../assets/baseramitralogo.png";
 
-import "../styles/footer.css";
+import "../styles/Footer.css";
 
 const Footer = () => {
 

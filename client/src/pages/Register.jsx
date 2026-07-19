@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import api from "../services/api";
 import { useAuth } from "../context/AuthContext";
 
-import "../styles/auth.css";
+import "../styles/Auth.css";
 
 
 const Register = () => {
