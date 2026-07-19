@@ -1,8 +1,7 @@
-import Property from "../models/property.js";
+import Property from "../models/Property.js";
+import Favorite from "../models/Favorite.js";
+import Inquiry from "../models/Inquiry.js";
 import User from "../models/user.js";
-import Favorite from "../models/favorite.js";
-import Inquiry from "../models/inquiry.js";
-
 
 
 
