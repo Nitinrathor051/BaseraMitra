@@ -1,0 +1,282 @@
+/* ===========================
+   FAVORITES PAGE
+=========================== */
+
+
+.favorites-page{
+
+    min-height:100vh;
+
+    background:#f8fafc;
+
+    color:#111827;
+
+}
+
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+
+.favorites-header{
+
+    padding:150px 0 70px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #fff1f2,
+        #ffffff
+    );
+
+}
+
+
+
+.favorites-header h1{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:44px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.favorites-header h1 svg{
+
+    color:#ef4444;
+
+}
+
+
+
+.favorites-header p{
+
+    color:#6b7280;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+/* ===========================
+   SECTION
+=========================== */
+
+
+.favorites-section{
+
+    padding:50px 0 90px;
+
+}
+
+
+
+
+
+/* ===========================
+   GRID
+=========================== */
+
+
+.favorite-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+
+
+
+
+.favorite-card{
+
+    position:relative;
+
+}
+
+
+
+
+
+/* ===========================
+   REMOVE BUTTON
+=========================== */
+
+
+.remove-favorite{
+
+    width:calc(100% - 40px);
+
+    margin:15px 20px 20px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.remove-favorite:hover{
+
+    background:#fecaca;
+
+}
+
+
+
+
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+
+.empty-favorite{
+
+    background:#ffffff;
+
+    border:1px dashed #d1d5db;
+
+    border-radius:24px;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+}
+
+
+
+.empty-favorite svg{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.empty-favorite h2{
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.empty-favorite p{
+
+    color:#6b7280;
+
+}
+
+
+
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+
+@media(max-width:900px){
+
+
+    .favorites-header{
+
+        padding:120px 0 50px;
+
+    }
+
+
+
+    .favorites-header h1{
+
+        font-size:36px;
+
+    }
+
+
+
+    .favorite-grid{
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+    .favorites-header h1{
+
+        font-size:30px;
+
+    }
+
+
+
+    .favorite-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}

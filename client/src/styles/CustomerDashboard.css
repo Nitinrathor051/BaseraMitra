@@ -1,0 +1,465 @@
+
+/* =====================================
+   CUSTOMER DASHBOARD
+===================================== */
+
+.customer-dashboard{
+    min-height:100vh;
+    padding-top:110px;
+    background:#f8fafc;
+}
+
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+.customer-section{
+    padding:30px 0;
+}
+
+
+
+/* =====================================
+   PROFILE
+===================================== */
+
+
+.customer-profile-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+.customer-profile-icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:50%;
+
+    background:#ccfbf1;
+
+    color:#0f766e;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.customer-profile-info h2{
+
+    font-size:26px;
+
+    color:#111827;
+
+    margin:0 0 10px;
+
+}
+
+
+
+.customer-profile-info p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#6b7280;
+
+    margin:6px 0;
+
+}
+
+
+
+.customer-role-badge{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================
+   SECTION TITLE
+===================================== */
+
+
+.customer-section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+
+
+.customer-section-title h2{
+
+    font-size:26px;
+
+    color:#111827;
+
+    margin:0;
+
+}
+
+
+
+.customer-section-title span{
+
+    color:#6b7280;
+
+    font-size:14px;
+
+}
+
+
+
+/* =====================================
+   FAVORITE PROPERTY GRID
+===================================== */
+
+
+.customer-property-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+
+/* PropertyCard wrapper */
+
+.customer-property-grid > div{
+
+    min-width:0;
+
+}
+
+
+
+/* Compact property card sizing */
+
+.customer-property-grid .property-card{
+
+    border-radius:16px;
+
+}
+
+
+
+.customer-property-grid .property-image{
+
+    height:150px;
+
+}
+
+
+
+.customer-property-grid .property-content{
+
+    padding:12px;
+
+}
+
+
+
+.customer-property-grid .property-content h3{
+
+    font-size:16px;
+
+    margin-bottom:6px;
+
+}
+
+
+
+.customer-property-grid .property-content h4{
+
+    font-size:17px;
+
+    margin:8px 0;
+
+}
+
+
+
+.customer-property-grid .property-info{
+
+    gap:5px;
+
+}
+
+
+
+.customer-property-grid .property-info span{
+
+    font-size:11px;
+
+    padding:4px 7px;
+
+}
+/* =====================================
+   EMPTY STATE CARD
+===================================== */
+
+.customer-empty-card{
+
+    width:100%;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:22px;
+
+    padding:55px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:280px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+.customer-empty-card svg{
+
+    width:55px;
+
+    height:55px;
+
+    padding:12px;
+
+    border-radius:50%;
+
+    background:#ccfbf1;
+
+    color:#0f766e;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.customer-empty-card h3{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin:0 0 10px;
+
+}
+
+
+
+.customer-empty-card p{
+
+    max-width:420px;
+
+    color:#6b7280;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+
+}
+
+
+
+.customer-empty-card a{
+
+    padding:11px 22px;
+
+    border-radius:12px;
+
+    background:#0f766e;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.customer-empty-card a:hover{
+
+    background:#115e59;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* =====================================
+   INQUIRY COMING SOON STYLE
+===================================== */
+
+
+.customer-inquiry-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:22px;
+
+    padding:45px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    min-height:240px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+.customer-inquiry-card svg{
+
+    width:55px;
+
+    height:55px;
+
+    padding:12px;
+
+    border-radius:50%;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.customer-inquiry-card h3{
+
+    font-size:22px;
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.customer-inquiry-card p{
+
+    color:#6b7280;
+
+    font-size:15px;
+
+    max-width:450px;
+
+    line-height:1.7;
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .customer-empty-card,
+    .customer-inquiry-card{
+
+        padding:35px 20px;
+
+        min-height:220px;
+
+    }
+
+
+    .customer-empty-card h3,
+    .customer-inquiry-card h3{
+
+        font-size:20px;
+
+    }
+
+}

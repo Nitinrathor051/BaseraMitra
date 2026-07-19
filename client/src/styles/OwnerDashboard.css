@@ -1,0 +1,681 @@
+/* =====================================
+   OWNER DASHBOARD
+===================================== */
+
+.owner-dashboard{
+
+    min-height:100vh;
+    padding-top:110px;
+    background:#f8fafc;
+
+}
+
+
+/* =====================================
+   LOADING
+===================================== */
+
+.owner-loading{
+
+    padding:150px 20px;
+    text-align:center;
+    color:#6b7280;
+
+}
+
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+
+.owner-dashboard-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+
+}
+
+
+.owner-dashboard-header h1{
+
+    font-size:34px;
+    color:#111827;
+    margin:0 0 8px;
+
+}
+
+
+.owner-dashboard-header p{
+
+    color:#6b7280;
+    margin:0;
+
+}
+
+
+
+.owner-add-btn{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:12px 22px;
+
+    background:#0f766e;
+    color:white;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.owner-add-btn:hover{
+
+    background:#115e59;
+
+}
+
+
+
+/* =====================================
+   PROFILE
+===================================== */
+
+
+.owner-profile-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+
+.owner-profile-icon{
+
+    width:75px;
+    height:75px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#ccfbf1;
+
+    color:#0f766e;
+
+}
+
+
+
+.owner-profile-card h3{
+
+    font-size:25px;
+
+    color:#111827;
+
+    margin:0 0 8px;
+
+}
+
+
+
+.owner-profile-card p{
+
+    color:#6b7280;
+
+    margin:5px 0;
+
+}
+
+
+
+.owner-profile-card span{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    background:#dcfce7;
+
+    color:#166534;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+
+/* =====================================
+   BLOCK TITLE
+===================================== */
+
+
+.owner-dashboard-block{
+
+    padding:30px 0;
+
+}
+
+
+
+.owner-block-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+
+
+.owner-block-title h2{
+
+    font-size:28px;
+
+    color:#111827;
+
+    margin:0;
+
+}
+
+
+
+.owner-block-title span{
+
+    color:#6b7280;
+
+}
+
+
+
+/* =====================================
+   PROPERTY GRID
+===================================== */
+
+
+.owner-property-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+
+/* =====================================
+   PROPERTY CARD
+===================================== */
+
+
+.owner-property-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+
+
+.owner-property-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.owner-property-card img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+}
+
+
+
+.owner-property-card > div{
+
+    padding:15px;
+
+}
+
+
+
+.owner-property-card h3{
+
+    font-size:17px;
+
+    color:#111827;
+
+    margin:0 0 8px;
+
+}
+
+
+
+.owner-property-card p{
+
+    font-size:13px;
+
+    color:#6b7280;
+
+    margin:4px 0;
+
+}
+
+
+
+/* DETAILS TAGS */
+
+
+.owner-property-extra{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:6px;
+
+    margin:10px 0;
+
+}
+
+
+
+.owner-property-extra p{
+
+    background:#f1f5f9;
+
+    padding:5px 8px;
+
+    border-radius:8px;
+
+    font-size:12px;
+
+}
+
+
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+
+.owner-actions{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:12px;
+
+}
+
+
+
+.owner-actions a,
+.owner-actions button{
+
+    flex:1;
+
+    height:35px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:5px;
+
+    font-size:13px;
+
+    cursor:pointer;
+
+}
+
+
+
+.owner-actions a{
+
+    background:#0f766e;
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+.owner-actions button{
+
+    border:none;
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+}
+
+
+
+/* =====================================
+   EMPTY CARD
+===================================== */
+
+
+.owner-empty-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:20px;
+
+    padding:45px 20px;
+
+    text-align:center;
+
+}
+
+
+
+.owner-empty-card svg{
+
+    color:#0f766e;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.owner-empty-card h3{
+
+    color:#111827;
+
+    margin:0 0 10px;
+
+}
+
+
+
+.owner-empty-card p{
+
+    color:#6b7280;
+
+}
+
+
+
+/* =====================================
+   INQUIRY GRID
+===================================== */
+
+
+.owner-inquiry-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+
+.owner-inquiry-card{
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:18px;
+
+    padding:15px;
+
+}
+
+
+
+/* PROPERTY INFO */
+
+
+.owner-inquiry-property{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.owner-inquiry-property img{
+
+    width:75px;
+
+    height:60px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+
+.owner-inquiry-property h3{
+
+    font-size:14px;
+
+    margin:0 0 5px;
+
+    color:#111827;
+
+}
+
+
+
+.owner-inquiry-property p{
+
+    font-size:12px;
+
+    color:#6b7280;
+
+    margin:3px 0;
+
+}
+
+
+
+/* CUSTOMER DETAILS */
+
+
+.owner-inquiry-details{
+
+    border-top:1px solid #e5e7eb;
+
+    padding-top:12px;
+
+}
+
+
+
+.owner-inquiry-details h3{
+
+    font-size:15px;
+
+    color:#111827;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.owner-inquiry-details p{
+
+    font-size:12px;
+
+    color:#6b7280;
+
+    margin:5px 0;
+
+}
+
+
+
+.owner-inquiry-details small{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#9ca3af;
+
+}
+
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+
+@media(max-width:1200px){
+
+    .owner-property-grid,
+    .owner-inquiry-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+
+
+@media(max-width:900px){
+
+    .owner-property-grid,
+    .owner-inquiry-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .owner-dashboard-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+}
+
+
+
+@media(max-width:600px){
+
+    .owner-dashboard{
+
+        padding-top:90px;
+
+    }
+
+
+    .owner-profile-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .owner-property-grid,
+    .owner-inquiry-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .owner-block-title{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
+}

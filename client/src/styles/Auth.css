@@ -1,0 +1,596 @@
+/* ===========================
+   AUTH PAGE
+=========================== */
+
+.auth-page{
+    min-height:calc(100vh - 170px);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:105px 20px 50px;
+
+    background:#f8fafc;
+}
+
+
+/* ===========================
+   CARD
+=========================== */
+
+.auth-card{
+
+    width:100%;
+
+    max-width:500px;
+
+    background:#ffffff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:22px;
+
+    padding:28px 32px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+
+}
+
+
+.become-owner-card{
+
+    max-width:650px;
+
+}
+
+
+
+/* ===========================
+   HEADER
+=========================== */
+
+.auth-header{
+
+    text-align:center;
+
+    margin-bottom:22px;
+
+}
+
+
+.auth-header h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:7px;
+
+}
+
+
+.auth-header p{
+
+    font-size:14px;
+
+    color:#6b7280;
+
+    line-height:1.6;
+
+}
+
+
+
+/* ===========================
+   FORM
+=========================== */
+
+.auth-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:13px;
+
+}
+
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:7px;
+
+}
+
+
+.form-group label{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:#374151;
+
+}
+
+
+.form-group input{
+
+    width:100%;
+
+    height:48px;
+
+    padding:0 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    background:#ffffff;
+
+    color:#111827;
+
+    transition:.25s;
+
+}
+
+
+.form-group input::placeholder{
+
+    color:#9ca3af;
+
+}
+
+
+.form-group input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+
+
+/* ===========================
+   PASSWORD
+=========================== */
+
+
+.password-box{
+
+    position:relative;
+
+}
+
+
+.password-box input{
+
+    padding-right:48px;
+
+}
+
+
+.password-box button{
+
+    position:absolute;
+
+    right:14px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:transparent;
+
+    border:none;
+
+    color:#6b7280;
+
+    cursor:pointer;
+
+}
+
+
+.password-box button:hover{
+
+    color:#2563eb;
+
+}
+
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.login-btn{
+
+    width:100%;
+
+    height:48px;
+
+    margin-top:6px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.login-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+
+.login-btn:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+}
+
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.auth-footer{
+
+    margin-top:20px;
+
+    text-align:center;
+
+}
+
+
+.auth-footer p{
+
+    font-size:14px;
+
+    color:#6b7280;
+
+}
+
+
+.auth-footer a{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    margin-left:5px;
+
+    text-decoration:none;
+
+}
+
+
+
+/* ==========================================
+   BECOME OWNER
+========================================== */
+
+
+.owner-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+.owner-section h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+
+
+/* ===========================
+   IMAGE UPLOAD
+=========================== */
+
+
+.image-upload-box{
+
+    width:100%;
+
+    min-height:150px;
+
+    border:2px dashed #cbd5e1;
+
+    border-radius:18px;
+
+    background:#f8fafc;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.image-upload-box:hover{
+
+    border-color:#2563eb;
+
+    background:#eff6ff;
+
+}
+
+
+.image-upload-box svg{
+
+    color:#2563eb;
+
+}
+
+
+.image-upload-box span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#111827;
+
+}
+
+
+.image-upload-box small{
+
+    color:#6b7280;
+
+}
+
+
+.profile-preview{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+    border:4px solid #ffffff;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+
+
+/* ===========================
+   GRID
+=========================== */
+
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+
+
+/* ===========================
+   TEXTAREA
+=========================== */
+
+
+.form-group textarea{
+
+    width:100%;
+
+    min-height:80px;
+
+    resize:vertical;
+
+    padding:14px 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    font-family:inherit;
+
+}
+
+
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,blue,.12);
+
+}
+
+
+
+/* ===========================
+   SELECT
+=========================== */
+
+
+.form-group select{
+
+    width:100%;
+
+    height:48px;
+
+    padding:0 15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    font-size:14px;
+
+}
+
+
+.form-group select:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+}
+
+
+
+/* ===========================
+   READ ONLY
+=========================== */
+
+
+.form-group input[readonly]{
+
+    background:#f3f4f6;
+
+    color:#4b5563;
+
+}
+
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+
+@media(max-width:768px){
+
+    .auth-page{
+
+        padding:90px 16px 40px;
+
+    }
+
+
+    .auth-card{
+
+        padding:24px 20px;
+
+        border-radius:18px;
+
+    }
+
+
+    .auth-header h1{
+
+        font-size:26px;
+
+    }
+
+
+    .grid-2{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .image-upload-box{
+
+        min-height:130px;
+
+    }
+
+
+    .profile-preview{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+}

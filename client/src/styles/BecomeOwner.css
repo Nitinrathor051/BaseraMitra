@@ -1,0 +1,330 @@
+/* =====================================
+   BECOME OWNER PAGE
+===================================== */
+
+.owner-page{
+    min-height:100vh;
+    background:#f8fafc;
+    color:#111827;
+}
+
+/* =====================================
+   HERO
+===================================== */
+
+.owner-hero{
+    padding:130px 0 70px;
+    background:linear-gradient(135deg,#f8fafc,#ecfeff);
+}
+
+.owner-hero-content{
+    text-align:center;
+}
+
+.owner-badge{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 18px;
+    border-radius:30px;
+    background:#ccfbf1;
+    color:#0f766e;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:22px;
+}
+
+.owner-hero-content h1{
+    font-size:48px;
+    line-height:1.15;
+    margin-bottom:16px;
+    color:#111827;
+}
+
+.owner-hero-content p{
+    max-width:700px;
+    margin:auto;
+    color:#6b7280;
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* =====================================
+   FORM SECTION
+===================================== */
+
+.owner-form-section{
+    padding:45px 0 80px;
+}
+
+.owner-card{
+    max-width:760px;
+    margin:auto;
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+.owner-form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+/* =====================================
+   SECTION
+===================================== */
+
+.owner-section{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.owner-section h3{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:20px;
+    color:#111827;
+    margin-bottom:4px;
+}
+
+.owner-section h3 svg{
+    color:#0f766e;
+}
+
+/* =====================================
+   GRID
+===================================== */
+
+.owner-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.owner-full{
+    grid-column:1/-1;
+}
+
+/* =====================================
+   FORM FIELDS
+===================================== */
+
+.owner-field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.owner-field label{
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+}
+
+.owner-field input,
+.owner-field select,
+.owner-field textarea{
+    width:100%;
+    border:1px solid #dbe3ec;
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:15px;
+    font-family:inherit;
+    background:#fff;
+    color:#111827;
+    outline:none;
+    transition:.25s;
+}
+
+.owner-field input{
+    height:48px;
+}
+
+.owner-field select{
+    height:48px;
+    cursor:pointer;
+}
+
+.owner-field textarea{
+    resize:none;
+    min-height:90px;
+}
+
+.owner-field input:focus,
+.owner-field select:focus,
+.owner-field textarea:focus{
+    border-color:#0f766e;
+    box-shadow:0 0 0 4px rgba(15,118,110,.10);
+}
+
+.owner-field input[readonly]{
+    background:#f8fafc;
+    color:#6b7280;
+    cursor:not-allowed;
+}
+/* =====================================
+   PROFILE UPLOAD
+===================================== */
+
+.owner-upload-box{
+    min-height:140px;
+    border:2px dashed #cbd5e1;
+    border-radius:16px;
+    background:#fcfdff;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:20px;
+    cursor:pointer;
+    transition:.25s;
+    text-align:center;
+}
+
+.owner-upload-box:hover{
+    border-color:#0f766e;
+    background:#f0fdfa;
+}
+
+.owner-upload-box svg{
+    color:#0f766e;
+}
+
+.owner-upload-box span{
+    font-size:15px;
+    font-weight:600;
+    color:#111827;
+}
+
+.owner-upload-box small{
+    color:#6b7280;
+    font-size:13px;
+}
+
+.owner-preview{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #e5e7eb;
+}
+
+/* =====================================
+   SUBMIT BUTTON
+===================================== */
+
+.owner-submit-btn{
+    height:50px;
+    border:none;
+    border-radius:14px;
+    background:#0f766e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+    margin-top:4px;
+}
+
+.owner-submit-btn:hover{
+    background:#115e59;
+    transform:translateY(-2px);
+}
+
+.owner-submit-btn:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+    transform:none;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:768px){
+
+    .owner-hero{
+        padding:110px 0 55px;
+    }
+
+    .owner-hero-content h1{
+        font-size:36px;
+    }
+
+    .owner-hero-content p{
+        font-size:15px;
+    }
+
+    .owner-card{
+        padding:22px;
+        border-radius:18px;
+    }
+
+    .owner-grid{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .owner-full{
+        grid-column:auto;
+    }
+
+    .owner-upload-box{
+        min-height:120px;
+    }
+}
+
+@media(max-width:576px){
+
+    .owner-hero-content h1{
+        font-size:30px;
+    }
+
+    .owner-form-section{
+        padding:35px 0 60px;
+    }
+
+    .owner-card{
+        padding:18px;
+    }
+
+    .owner-form{
+        gap:18px;
+    }
+
+    .owner-section{
+        gap:12px;
+    }
+
+    .owner-field input,
+    .owner-field select{
+        height:46px;
+    }
+
+    .owner-field textarea{
+        min-height:80px;
+    }
+
+    .owner-upload-box{
+        min-height:110px;
+        padding:16px;
+    }
+
+    .owner-preview{
+        width:85px;
+        height:85px;
+    }
+
+    .owner-submit-btn{
+        height:48px;
+    }
+}

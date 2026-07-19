@@ -1,0 +1,474 @@
+/* ===============================
+   PROPERTIES PAGE
+================================ */
+
+
+.properties-page {
+
+    padding-top: 80px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   HEADER
+================================ */
+
+
+.listing-header {
+
+    background: #f8fafc;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+}
+
+
+
+.listing-header h1 {
+
+    font-size: 42px;
+
+    color: #111827;
+
+    margin-bottom: 15px;
+
+    font-weight: 800;
+
+}
+
+
+
+.listing-header p {
+
+    color: #6b7280;
+
+    font-size: 18px;
+
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   CONTAINER
+================================ */
+
+
+.container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 20px;
+
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   FILTER SECTION
+================================ */
+
+
+.filter-section {
+
+    padding: 35px 0;
+
+}
+
+
+
+.filter-box {
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+
+    background: white;
+
+    padding: 20px;
+
+
+    border-radius: 18px;
+
+
+    border:1px solid #e5e7eb;
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+
+}
+
+
+
+
+.filter-input {
+
+
+    flex:1;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    background:#f9fafb;
+
+
+    padding:14px 18px;
+
+
+    border-radius:12px;
+
+
+    color:#6b7280;
+
+}
+
+
+
+.filter-input input {
+
+
+    width:100%;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    background:transparent;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+.filter-btn {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+    gap:8px;
+
+
+    padding:14px 22px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    background:#111827;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+    font-size:15px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.filter-btn:hover {
+
+
+    background:#2563eb;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===============================
+   PROPERTY SECTION
+================================ */
+
+
+.property-section {
+
+    padding:30px 0 70px;
+
+}
+
+
+
+
+
+
+.listing-title {
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+.listing-title h2 {
+
+
+    font-size:30px;
+
+
+    color:#111827;
+
+
+}
+
+
+
+.listing-title span {
+
+
+    color:#6b7280;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   PROPERTY GRID
+================================ */
+
+
+.property-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+
+
+/* ===============================
+   MESSAGE
+================================ */
+
+
+.property-grid p {
+
+
+    grid-column:1/-1;
+
+
+    text-align:center;
+
+
+    padding:50px;
+
+
+    color:#6b7280;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+
+
+@media(max-width:900px){
+
+
+    .property-grid {
+
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+@media(max-width:650px){
+
+
+
+    .listing-header {
+
+
+        padding:50px 15px;
+
+
+    }
+
+
+
+    .listing-header h1 {
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+    .filter-box {
+
+
+        flex-direction:column;
+
+
+        align-items:stretch;
+
+
+    }
+
+
+
+    .filter-btn {
+
+
+        justify-content:center;
+
+
+    }
+
+
+
+    .listing-title {
+
+
+        flex-direction:column;
+
+
+        align-items:flex-start;
+
+
+        gap:8px;
+
+
+    }
+
+
+
+    .listing-title h2 {
+
+
+        font-size:24px;
+
+
+    }
+
+
+
+    .property-grid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+}

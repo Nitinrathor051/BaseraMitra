@@ -1,0 +1,297 @@
+/* ===========================
+   BUY PAGE
+=========================== */
+
+.buy-page{
+    min-height:100vh;
+    background:#f8fafc;
+    color:#111827;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.buy-container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.buy-header{
+    padding:140px 0 60px;
+    background:
+    linear-gradient(
+        135deg,
+        #eff6ff 0%,
+        #ecfeff 45%,
+        #f8fafc 100%
+    );
+    text-align:center;
+}
+
+.buy-header h1{
+    font-size:46px;
+    font-weight:800;
+    margin-bottom:12px;
+    color:#111827;
+}
+
+.buy-header p{
+    font-size:16px;
+    color:#6b7280;
+}
+
+/* ===========================
+   FILTERS
+=========================== */
+
+.buy-filter-section{
+    padding:35px 0;
+}
+
+.buy-filter-box{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    padding:18px;
+    display:grid;
+    grid-template-columns:2fr 1.5fr 1.5fr auto auto;
+    gap:15px;
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+}
+
+.buy-filter-input,
+.buy-filter-select{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    height:54px;
+    padding:0 16px;
+    background:#fff;
+    border:1px solid #dbe3ec;
+    border-radius:14px;
+    transition:.25s;
+}
+
+.buy-filter-input:focus-within,
+.buy-filter-select:focus-within{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.buy-filter-input svg,
+.buy-filter-select svg{
+    color:#0f766e;
+}
+
+.buy-filter-input input,
+.buy-filter-select select{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:14px;
+    color:#374151;
+}
+
+.buy-filter-select select{
+    cursor:pointer;
+}
+
+.buy-filter-btn{
+    height:54px;
+    padding:0 22px;
+    border:none;
+    border-radius:14px;
+    background:#0f766e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.25s;
+}
+
+.buy-filter-btn:hover{
+    background:#115e59;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   PROPERTY SECTION
+=========================== */
+
+.buy-property-section{
+    padding:45px 0 90px;
+}
+
+.buy-listing-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.buy-listing-title h2{
+    font-size:30px;
+    color:#111827;
+}
+
+.buy-listing-title span{
+    color:#6b7280;
+    font-size:15px;
+}
+
+.buy-property-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+.buy-loading,
+.buy-empty-state{
+    grid-column:1/-1;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    padding:60px 20px;
+    text-align:center;
+    color:#6b7280;
+}
+
+.buy-empty-state h3{
+    color:#111827;
+    margin-bottom:10px;
+}
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1200px){
+
+    .buy-property-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:20px;
+    }
+
+}
+
+
+@media (max-width:992px){
+
+    .buy-header{
+        padding:120px 0 50px;
+    }
+
+    .buy-header h1{
+        font-size:38px;
+    }
+
+    .buy-filter-box{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .buy-filter-btn{
+        width:100%;
+    }
+
+    .buy-property-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .buy-filter-box{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+    .buy-filter-input,
+    .buy-filter-select,
+    .buy-filter-btn{
+        width:100%;
+    }
+
+    .buy-listing-title{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+}
+
+
+@media (max-width:600px){
+
+    .buy-header{
+        padding:105px 0 45px;
+    }
+
+    .buy-header h1{
+        font-size:30px;
+    }
+
+    .buy-header p{
+        font-size:14px;
+    }
+
+    .buy-listing-title h2{
+        font-size:24px;
+    }
+
+    .buy-property-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .buy-loading,
+    .buy-empty-state{
+        padding:40px 20px;
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .buy-container{
+        padding:0 16px;
+    }
+
+    .buy-header h1{
+        font-size:28px;
+    }
+
+    .buy-header p{
+        line-height:1.6;
+    }
+
+    .buy-filter-box{
+        padding:14px;
+        border-radius:16px;
+    }
+
+    .buy-filter-input,
+    .buy-filter-select,
+    .buy-filter-btn{
+        height:50px;
+    }
+
+    .buy-property-grid{
+        gap:16px;
+    }
+
+}

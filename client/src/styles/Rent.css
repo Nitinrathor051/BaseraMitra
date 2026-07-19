@@ -1,0 +1,240 @@
+/* ===========================
+   RENT PAGE
+=========================== */
+
+.rent-page{
+    min-height:100vh;
+    background:#f8fafc;
+    color:#111827;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.rent-header{
+    padding:140px 0 60px;
+    background:linear-gradient(
+        135deg,
+        #eff6ff 0%,
+        #ecfeff 45%,
+        #f8fafc 100%
+    );
+}
+
+.rent-header-content{
+    text-align:center;
+}
+
+.rent-header-content h1{
+    font-size:46px;
+    font-weight:800;
+    margin-bottom:12px;
+    color:#111827;
+}
+
+.rent-header-content p{
+    font-size:16px;
+    color:#6b7280;
+}
+
+/* ===========================
+   FILTER SECTION
+=========================== */
+
+.rent-filter-section{
+    padding:35px 0;
+}
+
+.rent-filter-box{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
+    padding:18px;
+    display:grid;
+    grid-template-columns:2fr 1.5fr 1.5fr auto auto;
+    gap:15px;
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+}
+
+.rent-filter-input,
+.rent-filter-select{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    height:54px;
+    padding:0 16px;
+    background:#fff;
+    border:1px solid #dbe3ec;
+    border-radius:14px;
+    transition:.25s;
+}
+
+.rent-filter-input:focus-within,
+.rent-filter-select:focus-within{
+    border-color:#2563eb;
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+}
+
+.rent-filter-input svg,
+.rent-filter-select svg{
+    color:#0f766e;
+    flex-shrink:0;
+}
+
+.rent-filter-input input,
+.rent-filter-select select{
+    width:100%;
+    height:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    font-size:14px;
+    color:#374151;
+}
+
+.rent-filter-select select{
+    cursor:pointer;
+}
+
+.rent-filter-btn{
+    height:54px;
+    padding:0 22px;
+    border:none;
+    border-radius:14px;
+    background:#0f766e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.rent-filter-btn:hover{
+    background:#115e59;
+    transform:translateY(-2px);
+}
+
+/* ===========================
+   PROPERTY SECTION
+=========================== */
+
+.rent-property-section{
+    padding:45px 0 90px;
+}
+
+.rent-listing-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.rent-listing-title h2{
+    font-size:30px;
+    font-weight:700;
+    color:#111827;
+}
+
+.rent-listing-title span{
+    font-size:15px;
+    color:#6b7280;
+}
+
+.rent-property-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+/* ===========================
+   EMPTY STATE / LOADING
+=========================== */
+
+.rent-empty-state,
+.rent-loading{
+    grid-column:1/-1;
+    text-align:center;
+    padding:60px 20px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:18px;
+    color:#6b7280;
+}
+
+.rent-empty-state h3{
+    margin-bottom:10px;
+    color:#111827;
+    font-size:24px;
+}
+
+.rent-empty-state p{
+    font-size:15px;
+    color:#6b7280;
+}
+
+.rent-loading{
+    font-size:16px;
+    font-weight:500;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:992px){
+
+    .rent-header{
+        padding:120px 0 50px;
+    }
+
+    .rent-header-content h1{
+        font-size:38px;
+    }
+
+    .rent-filter-box{
+        grid-template-columns:1fr;
+    }
+
+    .rent-filter-btn{
+        width:100%;
+    }
+
+    .rent-property-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:600px){
+
+    .rent-header{
+        padding:105px 0 45px;
+    }
+
+    .rent-header-content h1{
+        font-size:30px;
+    }
+
+    .rent-header-content p{
+        font-size:14px;
+    }
+
+    .rent-listing-title{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+    }
+
+    .rent-listing-title h2{
+        font-size:24px;
+    }
+
+    .rent-property-grid{
+        grid-template-columns:1fr;
+    }
+
+}
