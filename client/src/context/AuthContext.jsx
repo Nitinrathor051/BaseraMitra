@@ -95,7 +95,7 @@ export const AuthProvider = ({ children }) => {
 
 const refreshUser = async () => {
   try {
-    const { data } = await api.get("/api/v1/auth/me");
+    const { data } = await api.get("/auth/me");
 
     setUser(data.user);
     localStorage.setItem("user", JSON.stringify(data.user));
