@@ -17,6 +17,8 @@
   "author": "Nitin Rathor",
   "license": "ISC",
   "dependencies": {
+    "@getbrevo/brevo": "^6.0.2",
+    "axios": "^1.18.1",
     "bcrypt": "^6.0.0",
     "cloudinary": "^1.41.3",
     "cors": "^2.8.6",

@@ -6,13 +6,7 @@ import OTP from "../models/OTP.js";
 
 import { registerSchema } from "../validators/auth.validator.js";
 
-import {
-  generateOTP
-} from "../utils/generateOTP.js";
-
-import {
-  sendEmail
-} from "../utils/sendEmail.js";
+import sendEmail from "../utils/sendEmail.js";
 
 
 
@@ -1162,5 +1156,15 @@ export const getMe = async(req,res)=>{
 
   }
 
+
+};
+// ================= Generate OTP =================
+
+const generateOTP = () => {
+
+  return Math.floor(
+    100000 +
+    Math.random() * 900000
+  ).toString();
 
 };

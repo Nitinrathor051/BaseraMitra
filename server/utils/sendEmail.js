@@ -1,38 +1,58 @@
+import axios from "axios";
 
-export const sendEmail = async (email, subject, message) => {
+const sendEmail = async (
+  email,
+  subject,
+  message
+) => {
+
   try {
-    const response = await fetch("https://brevo.com", {
-      method: "POST",
-      headers: {
-        "accept": "application/json",
-        "content-type": "application/json",
-        "api-key": process.env.BREVO_API_KEY, // Render dashboard me ye key zaroor check kar lena
-      },
-      body: JSON.stringify({
+
+    const response = await axios.post(
+
+      "https://api.brevo.com/v3/smtp/email",
+
+      {
         sender: {
-          name: "Basera Mitra",
-          email: process.env.EMAIL_FROM, // Brevo me verified email hona zaroori hai
+          name: "BaseraMitra",
+          email: process.env.EMAIL_FROM,
         },
+
         to: [
           {
-            email: email, // Brevo ka format array ke andar object hi hota hai
+            email,
           },
         ],
-        subject: subject,
+
+        subject,
+
         textContent: message,
-      }),
-    });
+      },
 
-    const data = await response.json();
+      {
+        headers: {
+          "api-key": process.env.BREVO_API_KEY,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
 
-    if (!response.ok) {
-      throw new Error(JSON.stringify(data));
-    }
+    );
 
-    console.log("✅ Email sent successfully via Built-in Fetch API");
-    return data;
+    console.log("✅ Brevo Email Sent:", response.status);
+
+    return true;
+
   } catch (error) {
-    console.error("❌ Email sending failed:", error.message);
+
+    console.log("❌ STATUS:", error.response?.status);
+    console.log("❌ DATA:", error.response?.data);
+    console.log("❌ MESSAGE:", error.message);
+
     throw error;
+
   }
+
 };
+
+export default sendEmail;
