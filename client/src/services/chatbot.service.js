@@ -6,7 +6,7 @@ import api from "./api";
 
 export const sendChatMessage = async (message) => {
   try {
-    const { data } = await api.post("/chatbot/message", {
+    const { data } = await api.post("/api/v1/chatbot/message", {
       message,
     });
 

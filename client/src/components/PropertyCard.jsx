@@ -107,7 +107,7 @@ const PropertyCard = ({
 
         await api.delete(
 
-          `/api/v1/favorites/${property._id}`
+          `/favorites/${property._id}`
 
         );
 
@@ -147,7 +147,7 @@ const PropertyCard = ({
 
         await api.post(
 
-          `/api/v1/favorites/${property._id}`
+          `/favorites/${property._id}`
 
         );
 

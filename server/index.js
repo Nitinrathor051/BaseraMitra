@@ -29,37 +29,37 @@ app.use(express.json());
 
 
 app.use(
-  "/api/v1/auth",
+  "/auth",
   authRoutes
 );
 
 
 app.use(
-  "/api/v1/owner",
+  "/owner",
   ownerRoutes
 );
 
 
 app.use(
-  "/api/v1/properties",
+  "/properties",
   propertyRoutes
 );
 
 
 app.use(
-  "/api/v1/favorites",
+  "/favorites",
   favoriteRoutes
 );
 
 
 app.use(
-  "/api/v1/inquiries",
+  "/inquiries",
   inquiryRoutes
 );
 
 
 app.use(
-  "/api/v1/chatbot",
+  "/chatbot",
   chatbotRoutes
 );
 

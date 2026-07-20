@@ -69,7 +69,7 @@ const Properties = () => {
 
             const {data}=await api.get(
 
-                "/api/v1/properties",
+                "/properties",
 
                 {
 
@@ -153,7 +153,7 @@ const Properties = () => {
 
             const {data}=await api.get(
 
-                "/api/v1/favorites"
+                "/favorites"
 
             );
 

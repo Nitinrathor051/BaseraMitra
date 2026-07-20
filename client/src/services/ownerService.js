@@ -5,7 +5,7 @@ const ownerService = {
   becomeOwner: async (formData) => {
     try {
       const { data } = await api.post(
-        "/api/v1/owner/become-owner",
+        "/owner/become-owner",
         formData
       );
 

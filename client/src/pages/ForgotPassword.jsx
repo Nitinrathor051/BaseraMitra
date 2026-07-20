@@ -49,7 +49,7 @@ const ForgotPassword = () => {
       const response =
       await api.post(
 
-        "/api/v1/auth/forgot-password",
+        "/auth/forgot-password",
 
         {
           email
@@ -127,7 +127,7 @@ const ForgotPassword = () => {
       const response =
       await api.post(
 
-        "/api/v1/auth/verify-reset-otp",
+        "/auth/verify-reset-otp",
 
         {
 
@@ -227,7 +227,7 @@ const ForgotPassword = () => {
       const response =
       await api.post(
 
-        "/api/v1/auth/reset-password",
+        "/auth/reset-password",
 
         {
 

@@ -82,7 +82,7 @@ const PropertyDetails = () => {
 
 
       const {data}=await api.get(
-        `/api/v1/properties/${id}`
+        `/properties/${id}`
       );
 
 
@@ -130,7 +130,7 @@ const PropertyDetails = () => {
 
 
       const {data}=await api.get(
-        "/api/v1/favorites"
+        "/favorites"
       );
 
 
@@ -227,7 +227,7 @@ const PropertyDetails = () => {
 
 
         await api.delete(
-          `/api/v1/favorites/${id}`
+          `/favorites/${id}`
         );
 
 
@@ -245,7 +245,7 @@ const PropertyDetails = () => {
 
 
         await api.post(
-          `/api/v1/favorites/${id}`
+          `/favorites/${id}`
         );
 
 
@@ -320,7 +320,7 @@ const PropertyDetails = () => {
 
       const {data}=await api.post(
 
-        `/api/v1/inquiries/${id}`,
+        `/inquiries/${id}`,
 
         inquiry
 

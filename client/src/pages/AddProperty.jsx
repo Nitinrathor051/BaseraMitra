@@ -85,7 +85,7 @@ const AddProperty = () => {
       setPageLoading(true);
 
       const { data } = await api.get(
-        `/api/v1/properties/${id}`
+        `/properties/${id}`
       );
 
       const property = data.property;
@@ -358,7 +358,7 @@ const handleSubmit = async (e) => {
 
     if (isEditMode) {
       response = await api.put(
-        `/api/v1/properties/${id}`,
+        `/properties/${id}`,
         data,
         {
           headers: {
@@ -369,7 +369,7 @@ const handleSubmit = async (e) => {
       );
     } else {
       response = await api.post(
-        "/api/v1/properties",
+        "/properties",
         data,
         {
           headers: {

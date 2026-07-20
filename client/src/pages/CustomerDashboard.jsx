@@ -44,7 +44,7 @@ const CustomerDashboard = () => {
 
 
       const { data } = await api.get(
-        "/api/v1/favorites"
+        "/favorites"
       );
 
 

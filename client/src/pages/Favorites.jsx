@@ -32,7 +32,7 @@ const Favorites = () => {
 
 
       const {data} = await api.get(
-        "/api/v1/favorites"
+        "/favorites"
       );
 
 
@@ -73,7 +73,7 @@ const Favorites = () => {
 
 
       await api.delete(
-        `/api/v1/favorites/${id}`
+        `/favorites/${id}`
       );
 
 
