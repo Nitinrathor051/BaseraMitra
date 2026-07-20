@@ -10,49 +10,69 @@ const sendEmail = async (
 
     const response = await axios.post(
 
-      "https://api.brevo.com/v3/smtp/email",
+      "https://api.resend.com/emails",
 
       {
-        sender: {
-          name: "BaseraMitra",
-          email: process.env.EMAIL_FROM,
-        },
+        from: `BaseraMitra <onboarding@resend.dev>`,
 
         to: [
-          {
-            email,
-          },
+          email
         ],
 
         subject,
 
-        textContent: message,
+        text: message,
       },
 
       {
         headers: {
-          "api-key": process.env.BREVO_API_KEY,
+
+          Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+
           "Content-Type": "application/json",
-          Accept: "application/json",
+
         },
+
       }
 
     );
 
-    console.log("✅ Brevo Email Sent:", response.status);
+
+    console.log(
+      "✅ Resend Email Sent:",
+      response.data
+    );
+
 
     return true;
 
+
   } catch (error) {
 
-    console.log("❌ STATUS:", error.response?.status);
-    console.log("❌ DATA:", error.response?.data);
-    console.log("❌ MESSAGE:", error.message);
+
+    console.log(
+      "❌ STATUS:",
+      error.response?.status
+    );
+
+
+    console.log(
+      "❌ DATA:",
+      error.response?.data
+    );
+
+
+    console.log(
+      "❌ MESSAGE:",
+      error.message
+    );
+
 
     throw error;
 
   }
 
 };
+
 
 export default sendEmail;

@@ -1,0 +1,10 @@
+* [33m57a463f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Save latest frontend and backend changes
+* [33mc599544[m Update email service
+* [33m7c058ec[m[33m ([m[1;31morigin/main[m[33m)[m Refactor sendEmail to use Fetch API instead of Axios
+* [33m8081199[m Refactor sendEmail to use Brevo API
+* [33m9c2a240[m Configure Brevo SMTP
+* [33m5d619cf[m Fix frontend API routes and endpoint configuration
+* [33m2abc086[m Fix frontend API routes and endpoint configuration
+* [33mb73907b[m Update SMTP configuration for production email
+* [33m11426fb[m Add API v1 route prefix
+* [33mf07af50[m Refactor API base URL and update frontend routes
