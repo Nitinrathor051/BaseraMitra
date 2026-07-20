@@ -35,6 +35,7 @@ const PropertyDetails = () => {
 
 
 
+
   const [property,setProperty] = useState(null);
 
   const [loading,setLoading] = useState(true);
@@ -107,6 +108,7 @@ const PropertyDetails = () => {
 
 
   };
+
 
 
 
@@ -288,7 +290,6 @@ const PropertyDetails = () => {
 
 
 
-
   // ===============================
   // INQUIRY
   // ===============================
@@ -329,8 +330,10 @@ const PropertyDetails = () => {
 
 
       toast.success(
+
         data.message ||
         "Inquiry sent successfully"
+
       );
 
 
@@ -382,9 +385,9 @@ const PropertyDetails = () => {
 
 
 
-
   if(!property)
     return <p>Property not found</p>;
+
 
 
 
@@ -399,8 +402,10 @@ return (
 
 
 
+
+
 {/* ===============================
-      IMAGE GALLERY
+      FULL WIDTH IMAGE GALLERY
 ================================ */}
 
 
@@ -421,6 +426,7 @@ property.images?.[activeImage]?.url ||
 alt={property.title}
 
 />
+
 
 
 
@@ -477,11 +483,16 @@ favorite
 
 
 
+
+
+
 <div className="image-thumbnails">
 
 
 {
+
 property.images?.map(
+
 (image,index)=>(
 
 
@@ -494,19 +505,28 @@ src={image.url}
 alt="property"
 
 onClick={()=>
+
+
 setActiveImage(index)
+
+
 }
+
 
 />
 
 
-))
+)
+
+
+)
 
 }
 
 
 
 </div>
+
 
 
 
@@ -520,16 +540,21 @@ setActiveImage(index)
 
 
 
-
-
-
 {/* ===============================
-      DETAILS
+      DETAILS + INQUIRY LAYOUT
 ================================ */}
 
 
+<section className="details-layout">
 
-<section className="details-content">
+
+
+
+
+{/* LEFT CONTENT */}
+
+
+<div className="details-info">
 
 
 
@@ -555,8 +580,6 @@ setActiveImage(index)
 
 
 
-
-
 <h2>
 
 
@@ -568,6 +591,7 @@ setActiveImage(index)
 
 
 {
+
 property.listingType==="rent" &&
 
 <small>
@@ -578,9 +602,6 @@ property.listingType==="rent" &&
 
 
 </h2>
-
-
-
 
 
 
@@ -620,9 +641,6 @@ property.listingType==="rent" &&
 
 
 
-
-
-
 <p>
 
 {property.description}
@@ -633,8 +651,7 @@ property.listingType==="rent" &&
 
 
 
-
-
+{/* OWNER BOX MOVED HERE */}
 
 
 <div className="owner-box">
@@ -665,9 +682,10 @@ Contact details are shared after inquiry.
 
 
 
+</div>
+{/* RIGHT SIDEBAR - INQUIRY */}
 
-
-
+<div className="details-sidebar">
 
 
 
@@ -709,6 +727,7 @@ Owner will contact you soon.
 :
 
 
+
 <form onSubmit={handleInquiry}>
 
 
@@ -730,6 +749,7 @@ name:e.target.value
 }
 
 />
+
 
 
 
@@ -756,6 +776,7 @@ phone:e.target.value
 
 
 
+
 <textarea
 
 placeholder="Message"
@@ -778,6 +799,7 @@ message:e.target.value
 
 
 
+
 <button
 
 disabled={sending}
@@ -789,11 +811,17 @@ disabled={sending}
 
 
 {
+
 sending
+
 ?
+
 "Sending..."
+
 :
+
 "Send Inquiry"
+
 }
 
 
@@ -808,15 +836,21 @@ sending
 
 
 
+
+
 </div>
 
 
 
 
 
+</div>
+
+
+
+
 
 </section>
-
 
 
 
@@ -829,6 +863,7 @@ sending
 
 
 };
+
 
 
 export default PropertyDetails;

@@ -11,21 +11,17 @@ import Contact from "../pages/Contact";
 
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import ForgotPassword from "../pages/ForgotPassword";
 
 import PropertyDetails from "../pages/PropertyDetails";
-
 
 import CustomerDashboard from "../pages/CustomerDashboard";
 import Favorites from "../pages/Favorites";
 import BecomeOwner from "../pages/BecomeOwner";
 
-
 import OwnerDashboard from "../pages/OwnerDashboard";
 import AddProperty from "../pages/AddProperty";
 
 import ProtectedRoute from "../components/ProtectedRoute";
-
 
 
 const AppRoutes = () => {
@@ -66,12 +62,10 @@ const AppRoutes = () => {
         />
 
 
-
         <Route
           path="property/:id"
           element={<PropertyDetails />}
         />
-
 
 
         <Route
@@ -86,12 +80,10 @@ const AppRoutes = () => {
         />
 
 
-
         <Route
           path="login"
           element={<Login />}
         />
-
 
 
         <Route
@@ -100,14 +92,7 @@ const AppRoutes = () => {
         />
 
 
-
-        {/* Forgot Password */}
-
-        <Route
-          path="forgot-password"
-          element={<ForgotPassword />}
-        />
-
+      
 
 
 
@@ -128,7 +113,6 @@ const AppRoutes = () => {
         />
 
 
-
         <Route
           path="favorites"
           element={
@@ -137,7 +121,6 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
-
 
 
         <Route
@@ -154,11 +137,9 @@ const AppRoutes = () => {
 
 
 
-
         {/* ==========================
             OWNER ROUTES
         ========================== */}
-
 
 
         <Route
@@ -171,8 +152,6 @@ const AppRoutes = () => {
         />
 
 
-
-
         <Route
           path="add-property"
           element={
@@ -181,7 +160,6 @@ const AppRoutes = () => {
             </ProtectedRoute>
           }
         />
-
 
 
         <Route
@@ -194,8 +172,8 @@ const AppRoutes = () => {
         />
 
 
-
       </Route>
+
 
     </Routes>
 

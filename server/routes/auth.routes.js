@@ -2,38 +2,23 @@ import express from "express";
 
 import {
   register,
-  verifyEmail,
   login,
-  forgotPassword,
-  verifyResetOTP,
-  resetPassword,
   getMe,
 } from "../controllers/auth.controller.js";
 
 import { protect } from "../middleware/auth.middleware.js";
 
-
 const router = express.Router();
 
 
 
-// ================= Auth Routes =================
-
+// ================= AUTH ROUTES =================
 
 // Register
 router.post(
   "/register",
   register
 );
-
-
-
-// Verify Email OTP
-router.post(
-  "/verify-email",
-  verifyEmail
-);
-
 
 
 // Login
@@ -44,41 +29,13 @@ router.post(
 
 
 
-// ================= Forgot Password Flow =================
+// ================= PROTECTED ROUTES =================
 
-
-// Send Reset OTP
-router.post(
-  "/forgot-password",
-  forgotPassword
-);
-
-
-
-// Verify Reset OTP
-router.post(
-  "/verify-reset-otp",
-  verifyResetOTP
-);
-
-
-
-// Reset Password
-router.post(
-  "/reset-password",
-  resetPassword
-);
-
-
-
-
-// Protected Route
+// Current Logged In User
 router.get(
   "/me",
   protect,
   getMe
 );
-
-
 
 export default router;

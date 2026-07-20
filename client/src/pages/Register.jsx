@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { Eye, EyeOff, UserPlus } from "lucide-react";
 import { toast } from "react-toastify";
 
-import api from "../services/api";
 import { useAuth } from "../context/AuthContext";
 
 import "../styles/Auth.css";
@@ -11,48 +10,29 @@ import "../styles/Auth.css";
 
 const Register = () => {
 
+
   const navigate = useNavigate();
 
   const { register, loading } = useAuth();
 
 
 
-  const [showPassword, setShowPassword] =
+  const [showPassword,setShowPassword] =
   useState(false);
 
 
-  const [showConfirmPassword, setShowConfirmPassword] =
-  useState(false);
-
-
-
-  const [showOTP, setShowOTP] =
+  const [showConfirmPassword,setShowConfirmPassword] =
   useState(false);
 
 
 
-  const [otp, setOtp] =
-  useState("");
 
-
-
-  const [registeredEmail, setRegisteredEmail] =
-  useState("");
-
-
-
-
-
-  const [formData, setFormData] = useState({
+  const [formData,setFormData] = useState({
 
     fullName:"",
-
     email:"",
-
     phone:"",
-
     password:"",
-
     confirmPassword:"",
 
   });
@@ -61,10 +41,7 @@ const Register = () => {
 
 
 
-
-
   const handleChange = (e)=>{
-
 
     setFormData((prev)=>({
 
@@ -81,21 +58,16 @@ const Register = () => {
 
 
 
-
-
   // ================= Register =================
 
-
   const handleSubmit = async(e)=>{
-
 
     e.preventDefault();
 
 
 
-
     if(
-      formData.password !== 
+      formData.password !==
       formData.confirmPassword
     ){
 
@@ -104,8 +76,6 @@ const Register = () => {
       );
 
     }
-
-
 
 
 
@@ -128,30 +98,16 @@ const Register = () => {
 
 
 
-
-
     if(result.success){
 
 
       toast.success(
-
         result.message ||
-        "OTP sent to your email"
-
+        "Registration successful"
       );
 
 
-
-      setRegisteredEmail(
-
-        formData.email
-
-      );
-
-
-
-      setShowOTP(true);
-
+      navigate("/login");
 
 
     }
@@ -160,83 +116,7 @@ const Register = () => {
 
 
       toast.error(
-
         result.message
-
-      );
-
-
-    }
-
-
-
-  };
-
-
-
-
-
-
-
-
-
-  // ================= Verify OTP =================
-
-
-  const handleVerifyOTP = async()=>{
-
-
-    try{
-
-
-      const response =
-      await api.post(
-
-        "/auth/verify-email",
-
-        {
-
-          email:registeredEmail,
-
-          otp
-
-        }
-
-      );
-
-
-
-
-
-      if(response.data.success){
-
-
-        toast.success(
-
-          "Email verified successfully"
-
-        );
-
-
-
-        navigate("/login");
-
-
-      }
-
-
-
-    }
-
-    catch(error){
-
-
-      toast.error(
-
-        error.response?.data?.message ||
-
-        "OTP verification failed"
-
       );
 
 
@@ -244,7 +124,6 @@ const Register = () => {
 
 
   };
-
 
 
 
@@ -256,40 +135,20 @@ const Register = () => {
 
     <section className="auth-page">
 
+
       <div className="auth-card">
 
 
         <div className="auth-header">
 
+
           <h1>
-
-          {
-            showOTP
-            ?
-            "Verify Email"
-            :
-            "Create Account"
-          }
-
+            Create Account
           </h1>
 
 
-
           <p>
-
-          {
-            showOTP
-
-            ?
-
-            "Enter OTP sent to your email"
-
-            :
-
-            "Create your BaseraMitra account"
-
-          }
-
+            Create your BaseraMitra account
           </p>
 
 
@@ -299,13 +158,18 @@ const Register = () => {
 
 
 
-        {!showOTP ? (
 
         <form
-        onSubmit={handleSubmit}
-        className="auth-form"
+          onSubmit={handleSubmit}
+          className="auth-form"
         >
-                    <div className="form-group">
+
+
+
+
+
+
+          <div className="form-group">
 
             <label>
               Full Name
@@ -335,7 +199,10 @@ const Register = () => {
 
 
 
+
+
           <div className="form-group">
+
 
             <label>
               Email Address
@@ -367,7 +234,9 @@ const Register = () => {
 
 
 
+
           <div className="form-group">
+
 
             <label>
               Mobile Number
@@ -380,7 +249,7 @@ const Register = () => {
 
               name="phone"
 
-              placeholder="Enter your mobile number"
+              placeholder="Enter mobile number"
 
               value={formData.phone}
 
@@ -401,11 +270,14 @@ const Register = () => {
 
 
 
+
           <div className="form-group">
+
 
             <label>
               Password
             </label>
+
 
 
             <div className="password-box">
@@ -439,23 +311,16 @@ const Register = () => {
 
                 type="button"
 
-                onClick={() =>
-                  setShowPassword(!showPassword)
-                }
+                onClick={()=>setShowPassword(!showPassword)}
 
               >
 
                 {
                   showPassword
-
                   ?
-
                   <EyeOff size={20}/>
-
                   :
-
                   <Eye size={20}/>
-
                 }
 
 
@@ -473,11 +338,14 @@ const Register = () => {
 
 
 
+
           <div className="form-group">
+
 
             <label>
               Confirm Password
             </label>
+
 
 
             <div className="password-box">
@@ -497,15 +365,14 @@ const Register = () => {
 
                 placeholder="Confirm password"
 
-                value={
-                  formData.confirmPassword
-                }
+                value={formData.confirmPassword}
 
                 onChange={handleChange}
 
                 required
 
               />
+
 
 
 
@@ -521,27 +388,27 @@ const Register = () => {
 
               >
 
+
                 {
                   showConfirmPassword
-
                   ?
-
                   <EyeOff size={20}/>
-
                   :
-
                   <Eye size={20}/>
-
                 }
 
 
               </button>
 
 
+
             </div>
 
 
+
           </div>
+
+
 
 
 
@@ -582,77 +449,6 @@ const Register = () => {
 
 
 
-        ) : (
-
-
-
-
-
-        <div className="auth-form">
-
-
-          <div className="form-group">
-
-
-            <label>
-              Enter OTP
-            </label>
-
-
-
-            <input
-
-              type="text"
-
-              placeholder="Enter 6 digit OTP"
-
-              value={otp}
-
-              onChange={(e)=>
-                setOtp(e.target.value)
-              }
-
-              maxLength={6}
-
-              required
-
-            />
-
-
-          </div>
-
-
-
-
-
-
-          <button
-
-            type="button"
-
-            className="login-btn"
-
-            onClick={handleVerifyOTP}
-
-          >
-
-            Verify Email
-
-          </button>
-
-
-
-
-
-
-        </div>
-
-
-
-        )}
-
-
-
 
 
 
@@ -661,35 +457,29 @@ const Register = () => {
         <div className="auth-footer">
 
 
-          {
-            !showOTP && (
+          <p>
 
-            <p>
-
-              Already have an account?
+            Already have an account?
 
 
-              <Link to="/login">
+            <Link to="/login">
 
-                {" "}
-                Login
+              {" "}
+              Login
 
-              </Link>
+            </Link>
 
 
-            </p>
-
-            )
-
-          }
-
+          </p>
 
 
         </div>
 
 
 
+
       </div>
+
 
 
     </section>

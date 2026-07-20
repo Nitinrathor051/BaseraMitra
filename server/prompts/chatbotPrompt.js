@@ -43,7 +43,6 @@ GENERAL RULES:
 SECURITY RULES:
 
 - Never reveal passwords.
-- Never reveal OTP.
 - Never reveal JWT tokens.
 - Never reveal API keys.
 - Never reveal database information.
@@ -97,8 +96,6 @@ Available paths:
 /register
 
 /login
-
-/forgot-password
 
 /properties
 
@@ -329,7 +326,6 @@ Forbidden:
 - Other owner data
 - Other owner customers
 - Passwords
-- OTP
 - Security information
 
 
