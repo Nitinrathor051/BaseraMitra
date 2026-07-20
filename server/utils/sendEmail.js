@@ -1,36 +1,38 @@
-import axios from "axios";
 
 export const sendEmail = async (email, subject, message) => {
   try {
-    const response = await axios.post(
-      "https://brevo.com",
-      {
+    const response = await fetch("https://brevo.com", {
+      method: "POST",
+      headers: {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "api-key": process.env.BREVO_API_KEY, // Render dashboard me ye key zaroor check kar lena
+      },
+      body: JSON.stringify({
         sender: {
           name: "Basera Mitra",
-          email: process.env.EMAIL_FROM, // Dhyaan dein: Yeh Brevo Dashboard me verified hona chahiye!
+          email: process.env.EMAIL_FROM, // Brevo me verified email hona zaroori hai
         },
         to: [
           {
-            email: email, // Brevo me 'to' hamesha array of object hota hai
+            email: email, // Brevo ka format array ke andar object hi hota hai
           },
         ],
         subject: subject,
-        textContent: message, // Plain text ke liye textContent use karein
-      },
-      {
-        headers: {
-          "accept": "application/json",
-          "content-type": "application/json",
-          "api-key": process.env.BREVO_API_KEY, // Render par BREVO_API_KEY naam se environment variable daal dena
-        },
-      }
-    );
+        textContent: message,
+      }),
+    });
 
-    console.log("✅ Email sent successfully via Brevo API");
-    return response.data;
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(JSON.stringify(data));
+    }
+
+    console.log("✅ Email sent successfully via Built-in Fetch API");
+    return data;
   } catch (error) {
-    // Agar koi dikkat aayegi toh yeh log exact wajah print karega Render dashboard me
-    console.error("❌ Email sending failed:", error.response ? error.response.data : error.message);
+    console.error("❌ Email sending failed:", error.message);
     throw error;
   }
 };
