@@ -192,7 +192,7 @@ const Register = () => {
       const response =
       await api.post(
 
-        "/auth/verify-email",
+        "/api/v1/auth/verify-email",
 
         {
 

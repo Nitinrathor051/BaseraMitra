@@ -32,7 +32,7 @@ const OwnerDashboard = () => {
     try {
 
       const { data } = await api.get(
-        "/properties/my-properties"
+        "/api/v1/properties/my-properties"
       );
 
       setProperties(
@@ -54,7 +54,7 @@ const OwnerDashboard = () => {
     try {
 
       const { data } = await api.get(
-        "/inquiries"
+        "/api/v1/inquiries"
       );
 
       setInquiries(
@@ -77,7 +77,7 @@ const OwnerDashboard = () => {
     try {
 
       await api.delete(
-        `/properties/${id}`
+        `/api/v1/properties/${id}`
       );
 
 

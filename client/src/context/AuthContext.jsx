@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
 
       const { data } = await api.post(
-        "/auth/login",
+        "/api/v1/auth/login",
         formData
       );
 
@@ -58,7 +58,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(true);
 
       const { data } = await api.post(
-        "/auth/register",
+        "/api/v1/auth/register",
         formData
       );
 

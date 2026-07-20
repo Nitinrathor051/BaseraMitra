@@ -64,7 +64,7 @@ const Rent = () => {
       setLoading(true);
 
       const { data } = await api.get(
-        "/properties",
+        "/api/v1/properties",
         {
           params: {
             listingType: "rent",
@@ -128,7 +128,7 @@ const Rent = () => {
 
     try {
       const { data } = await api.get(
-        "/favorites"
+        "/api/v1/favorites"
       );
 
       const ids =

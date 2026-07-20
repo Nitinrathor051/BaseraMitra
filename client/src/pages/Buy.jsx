@@ -58,7 +58,7 @@ const Buy = () => {
       setLoading(true);
 
       const { data } = await api.get(
-        "/properties",
+        "/api/v1/properties",
         {
           params: {
             listingType: "buy",
@@ -120,7 +120,7 @@ const Buy = () => {
 
     try {
       const { data } = await api.get(
-        "/favorites"
+        "/api/v1/favorites"
       );
 
       const ids =

@@ -1,11 +1,11 @@
 import api from "./api";
 
 const ownerService = {
-  // Become Owner
+  // Become Oapi.get(wner
   becomeOwner: async (formData) => {
     try {
       const { data } = await api.post(
-        "/owner/become-owner",
+        "/api/v1/owner/become-owner",
         formData
       );
 

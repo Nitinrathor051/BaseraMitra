@@ -67,10 +67,10 @@ const Home = () => {
 
       const [buyRes, rentRes] = await Promise.all([
         api.get(
-          "/properties?listingType=buy"
+          "/api/v1/properties?listingType=buy"
         ),
         api.get(
-          "/properties?listingType=rent"
+          "/api/v1/properties?listingType=rent"
         ),
       ]);
 
@@ -97,7 +97,7 @@ const Home = () => {
 
     try {
       const { data } = await api.get(
-        "/favorites"
+        "/api/v1/favorites"
       );
 
       const ids =
@@ -129,7 +129,7 @@ const Home = () => {
       setSearchLoading(true);
 
       const { data } = await api.get(
-        `/properties/suggestions?q=${value}`
+        `/api/v1/properties/suggestions?q=${value}`
       );
 
       setSuggestions(
