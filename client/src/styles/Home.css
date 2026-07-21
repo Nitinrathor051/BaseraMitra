@@ -1,19 +1,11 @@
-/* =====================================
-   HOME PAGE
-===================================== */
-
 .home-page{
     width:100%;
     overflow-x:hidden;
     background:#f8fafc;
 }
 
-/* =====================================
-   HERO
-===================================== */
-
 .home-hero-section{
-    padding:130px 0 80px;
+    padding:120px 0 70px;
     background:linear-gradient(135deg,#f8fafc,#ecfeff);
 }
 
@@ -30,7 +22,7 @@
     color:#0f766e;
     font-size:14px;
     font-weight:600;
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .home-hero-content h1{
@@ -41,20 +33,16 @@
 }
 
 .home-hero-content p{
-    max-width:620px;
+    max-width:650px;
     margin:auto;
     color:#6b7280;
     font-size:17px;
-    line-height:1.6;
+    line-height:1.65;
 }
-
-/* =====================================
-   HERO SEARCH
-===================================== */
 
 .home-hero-search{
     max-width:1100px;
-    margin:45px auto 0;
+    margin:42px auto 0;
     display:grid;
     grid-template-columns:2fr 1.2fr 1.2fr auto;
     gap:15px;
@@ -65,15 +53,15 @@
 }
 
 .home-search-box{
-    height:58px;
+    position:relative;
     display:flex;
     align-items:center;
     gap:12px;
+    height:58px;
     padding:0 16px;
     border:1px solid #e5e7eb;
     border-radius:14px;
     background:#fff;
-    position:relative;
 }
 
 .home-search-box svg{
@@ -95,10 +83,6 @@
 .home-search-box select{
     cursor:pointer;
 }
-
-/* =====================================
-   SEARCH SUGGESTIONS
-===================================== */
 
 .home-suggestion-box{
     position:absolute;
@@ -122,15 +106,12 @@
     cursor:pointer;
     font-size:14px;
     color:#374151;
+    transition:.25s;
 }
 
 .home-suggestion-item:hover{
     background:#f3f4f6;
 }
-
-/* =====================================
-   SEARCH BUTTON
-===================================== */
 
 .home-search-btn{
     height:58px;
@@ -152,27 +133,24 @@
 .home-search-btn:hover{
     background:#115e59;
 }
-/* =====================================
-   HOME SECTIONS
-===================================== */
 
 .home-section{
-    padding:45px 0;
+    padding:42px 0;
 }
 
 .home-section:first-of-type{
-    padding-top:60px;
+    padding-top:55px;
 }
 
 .home-section + .home-section{
-    padding-top:15px;
+    padding-top:12px;
 }
 
 .home-section-header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
 .home-section-header h2{
@@ -191,80 +169,226 @@
 
 .home-property-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:24px;
 }
 
-.home-property-grid > p{
+.home-property-grid>p{
     grid-column:1/-1;
     text-align:center;
     padding:60px 20px;
-    background:#ffffff;
+    background:#fff;
     border:1px solid #e5e7eb;
     border-radius:18px;
     color:#6b7280;
     font-size:16px;
 }
+@media (max-width:1200px){
 
-/* =====================================
-   RESPONSIVE
-===================================== */
+.home-hero-section{
+    padding:115px 0 65px;
+}
 
-@media(max-width:1100px){
+.home-hero-content h1{
+    font-size:46px;
+}
 
-    .home-hero-search{
-        grid-template-columns:1fr;
-    }
+.home-hero-content p{
+    max-width:620px;
+}
 
-    .home-property-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
+.home-hero-search{
+    max-width:1000px;
+    grid-template-columns:2fr 1fr 1fr auto;
+    gap:14px;
+    padding:16px;
+}
+
+.home-search-box,
+.home-search-btn{
+    height:56px;
+}
+
+.home-property-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+}
+
+.home-section{
+    padding:40px 0;
+}
 
 }
 
-@media(max-width:768px){
+@media (max-width:992px){
 
-    .home-hero-section{
-        padding:110px 0 60px;
-    }
+.home-hero-section{
+    padding:105px 0 55px;
+}
 
-    .home-hero-content h1{
-        font-size:38px;
-    }
+.home-hero-content h1{
+    font-size:40px;
+}
 
-    .home-hero-content p{
-        font-size:15px;
-    }
+.home-hero-content p{
+    font-size:16px;
+    max-width:560px;
+}
 
-    .home-section-header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:15px;
-    }
+.home-hero-search{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+    padding:16px;
+}
 
-    .home-section-header h2{
-        font-size:28px;
-    }
+.home-search-btn{
+    grid-column:1/-1;
+    width:100%;
+}
 
-    .home-property-grid{
-        grid-template-columns:1fr;
-    }
+.home-search-box,
+.home-search-btn{
+    height:54px;
+}
+
+.home-section{
+    padding:34px 0;
+}
+
+.home-section-header{
+    margin-bottom:24px;
+}
+
+.home-section-header h2{
+    font-size:28px;
+}
+
+.home-property-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:16px;
+}
+
+}
+@media (max-width:768px){
+
+.home-hero-section{
+    padding:84px 0 32px;
+}
+
+.home-hero-badge{
+    padding:6px 14px;
+    font-size:12px;
+    margin-bottom:14px;
+}
+
+.home-hero-content h1{
+    font-size:30px;
+    line-height:1.18;
+    margin-bottom:12px;
+}
+
+.home-hero-content p{
+    max-width:100%;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.home-hero-search{
+    margin-top:22px;
+    padding:12px;
+    gap:10px;
+    border-radius:14px;
+}
+
+.home-search-box,
+.home-search-btn{
+    height:48px;
+}
+
+.home-search-box{
+    padding:0 12px;
+}
+
+.home-search-box input,
+.home-search-box select{
+    font-size:14px;
+}
+
+.home-section{
+    padding:26px 0;
+}
+
+.home-section:first-of-type{
+    padding-top:34px;
+}
+
+.home-section + .home-section{
+    padding-top:4px;
+}
+
+.home-section-header{
+    margin-bottom:18px;
+}
+
+.home-section-header h2{
+    font-size:23px;
+}
+
+.home-property-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+}
 
 }
 
-@media(max-width:576px){
+@media (max-width:480px){
 
-    .home-hero-content h1{
-        font-size:30px;
-    }
+.home-hero-section{
+    padding:76px 0 26px;
+}
 
-    .home-hero-search{
-        padding:16px;
-    }
+.home-hero-content h1{
+    font-size:26px;
+}
 
-    .home-search-box,
-    .home-search-btn{
-        height:52px;
-    }
+.home-hero-content p{
+    font-size:13px;
+}
+
+.home-hero-search{
+    margin-top:18px;
+    padding:10px;
+    gap:8px;
+}
+
+.home-search-box,
+.home-search-btn{
+    height:46px;
+}
+
+.home-search-box{
+    padding:0 10px;
+}
+
+.home-search-box input,
+.home-search-box select{
+    font-size:13px;
+}
+
+.home-section{
+    padding:22px 0;
+}
+
+.home-section-header{
+    margin-bottom:16px;
+}
+
+.home-section-header h2{
+    font-size:21px;
+}
+
+.home-property-grid{
+    gap:12px;
+}
 
 }

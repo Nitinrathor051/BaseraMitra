@@ -172,126 +172,191 @@
     color:#111827;
     margin-bottom:10px;
 }
-/* ===========================
-   RESPONSIVE
-=========================== */
-
 @media (max-width:1200px){
 
-    .buy-property-grid{
-        grid-template-columns:repeat(3,1fr);
-        gap:20px;
-    }
-
+.buy-container{
+    max-width:1140px;
 }
 
+.buy-header{
+    padding:125px 0 55px;
+}
+
+.buy-header h1{
+    font-size:42px;
+}
+
+.buy-filter-box{
+    grid-template-columns:2fr 1.2fr 1.2fr auto auto;
+    gap:14px;
+}
+
+.buy-property-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+}
+
+}
 
 @media (max-width:992px){
 
-    .buy-header{
-        padding:120px 0 50px;
-    }
-
-    .buy-header h1{
-        font-size:38px;
-    }
-
-    .buy-filter-box{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .buy-filter-btn{
-        width:100%;
-    }
-
-    .buy-property-grid{
-        grid-template-columns:repeat(2,1fr);
-        gap:20px;
-    }
-
+.buy-header{
+    padding:110px 0 48px;
 }
 
+.buy-header h1{
+    font-size:36px;
+}
+
+.buy-header p{
+    font-size:15px;
+}
+
+.buy-filter-section{
+    padding:28px 0;
+}
+
+.buy-filter-box{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+    padding:16px;
+}
+
+.buy-filter-btn:last-child{
+    grid-column:1/-1;
+    width:100%;
+}
+
+.buy-filter-input,
+.buy-filter-select,
+.buy-filter-btn{
+    height:52px;
+}
+
+.buy-listing-title{
+    margin-bottom:24px;
+}
+
+.buy-listing-title h2{
+    font-size:28px;
+}
+
+.buy-property-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+}
+
+}
 
 @media (max-width:768px){
 
-    .buy-filter-box{
-        grid-template-columns:1fr;
-        gap:14px;
-    }
+.buy-header{
+    padding:92px 0 36px;
+}
 
-    .buy-filter-input,
-    .buy-filter-select,
-    .buy-filter-btn{
-        width:100%;
-    }
+.buy-header h1{
+    font-size:30px;
+}
 
-    .buy-listing-title{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:8px;
-    }
+.buy-header p{
+    font-size:14px;
+}
+
+.buy-filter-section{
+    padding:22px 0;
+}
+
+.buy-filter-box{
+    grid-template-columns:1fr;
+    gap:12px;
+    padding:14px;
+    border-radius:16px;
+}
+
+.buy-filter-input,
+.buy-filter-select,
+.buy-filter-btn{
+    width:100%;
+    height:48px;
+}
+
+.buy-listing-title{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+    margin-bottom:18px;
+}
+
+.buy-listing-title h2{
+    font-size:24px;
+}
+
+.buy-listing-title span{
+    font-size:14px;
+}
+
+.buy-property-section{
+    padding:30px 0 60px;
+}
+
+.buy-property-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:16px;
+}
+
+.buy-loading,
+.buy-empty-state{
+    padding:36px 18px;
+}
 
 }
 
+@media (max-width:576px){
 
-@media (max-width:600px){
-
-    .buy-header{
-        padding:105px 0 45px;
-    }
-
-    .buy-header h1{
-        font-size:30px;
-    }
-
-    .buy-header p{
-        font-size:14px;
-    }
-
-    .buy-listing-title h2{
-        font-size:24px;
-    }
-
-    .buy-property-grid{
-        grid-template-columns:1fr;
-        gap:18px;
-    }
-
-    .buy-loading,
-    .buy-empty-state{
-        padding:40px 20px;
-    }
-
+.buy-container{
+    padding:0 16px;
 }
 
+.buy-header{
+    padding:84px 0 30px;
+}
 
-@media (max-width:480px){
+.buy-header h1{
+    font-size:26px;
+}
 
-    .buy-container{
-        padding:0 16px;
-    }
+.buy-header p{
+    font-size:13px;
+    line-height:1.5;
+}
 
-    .buy-header h1{
-        font-size:28px;
-    }
+.buy-filter-box{
+    padding:12px;
+}
 
-    .buy-header p{
-        line-height:1.6;
-    }
+.buy-filter-input,
+.buy-filter-select,
+.buy-filter-btn{
+    height:46px;
+}
 
-    .buy-filter-box{
-        padding:14px;
-        border-radius:16px;
-    }
+.buy-filter-input input,
+.buy-filter-select select{
+    font-size:13px;
+}
 
-    .buy-filter-input,
-    .buy-filter-select,
-    .buy-filter-btn{
-        height:50px;
-    }
+.buy-listing-title h2{
+    font-size:22px;
+}
 
-    .buy-property-grid{
-        gap:16px;
-    }
+.buy-property-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+}
+
+.buy-loading,
+.buy-empty-state{
+    padding:32px 16px;
+}
 
 }

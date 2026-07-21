@@ -164,23 +164,23 @@
     color:#6b7280;
     line-height:1.7;
 }
-
 /* =====================================
    RESPONSIVE
 ===================================== */
 
-@media(max-width:1100px){
+@media (max-width:1100px){
 
     .contact-grid{
         grid-template-columns:repeat(2,1fr);
+        gap:18px;
     }
 
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .contact-hero{
-        padding:110px 0 60px;
+        padding:110px 15px 60px;
     }
 
     .contact-hero h1{
@@ -191,8 +191,31 @@
         font-size:15px;
     }
 
+    /* Keep 2 cards */
+    .contact-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+    }
+
+    .contact-card{
+        padding:22px 18px;
+    }
+
+    .contact-card h3{
+        font-size:18px;
+    }
+
+    .contact-card p,
+    .contact-card a{
+        font-size:14px;
+        line-height:1.6;
+        word-break:break-word;
+        overflow-wrap:anywhere;
+    }
+
     .faq-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
     }
 
     .faq-section h2{
@@ -201,10 +224,10 @@
 
 }
 
-@media(max-width:576px){
+@media (max-width:576px){
 
     .contact-hero{
-        padding:100px 0 50px;
+        padding:100px 15px 50px;
     }
 
     .contact-hero h1{
@@ -215,16 +238,41 @@
         font-size:14px;
     }
 
+    /* Still 2 cards */
     .contact-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
     }
 
     .contact-card{
-        padding:24px 20px;
+        padding:18px 14px;
+    }
+
+    .contact-card svg{
+        width:26px;
+        height:26px;
+        margin-bottom:12px;
+    }
+
+    .contact-card h3{
+        font-size:16px;
+        margin-bottom:8px;
+    }
+
+    .contact-card p,
+    .contact-card a{
+        font-size:12px;
+        line-height:1.5;
+        word-break:break-word;
+        overflow-wrap:anywhere;
+    }
+
+    .faq-grid{
+        grid-template-columns:1fr;
     }
 
     .faq-card{
-        padding:22px 18px;
+        padding:20px 16px;
     }
 
 }

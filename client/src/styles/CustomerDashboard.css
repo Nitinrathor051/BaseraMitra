@@ -440,26 +440,92 @@
 
 }
 
+/* =====================================
+   RESPONSIVE
+===================================== */
 
-/* Mobile */
+/* Laptop + Tablet (4 Cards) */
+@media (max-width:1024px){
 
-@media(max-width:600px){
+.customer-dashboard{
+    padding-top:105px;
+}
 
-    .customer-empty-card,
-    .customer-inquiry-card{
+.customer-profile-card{
+    padding:24px;
+}
 
-        padding:35px 20px;
+.customer-property-grid{
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
 
-        min-height:220px;
+.customer-property-grid .property-image{
+    height:135px;
+}
 
-    }
+.customer-property-grid .property-content{
+    padding:10px;
+}
 
+.customer-property-grid .property-content h3{
+    font-size:15px;
+}
 
-    .customer-empty-card h3,
-    .customer-inquiry-card h3{
+.customer-property-grid .property-content h4{
+    font-size:16px;
+}
 
-        font-size:20px;
+.customer-property-grid .property-info span{
+    font-size:10px;
+    padding:4px 6px;
+}
 
-    }
+}
+@media (max-width:768px){
+
+.customer-dashboard{
+    padding-top:95px;
+}
+
+.customer-property-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.customer-property-grid .property-image{
+    height:110px;
+}
+
+.customer-property-grid .property-content{
+    padding:10px;
+}
+
+.customer-property-grid .property-content h3{
+    font-size:14px;
+    line-height:1.3;
+    margin-bottom:6px;
+    max-height:36px;
+}
+
+.customer-property-grid .property-location{
+    margin-bottom:8px;
+    font-size:12px;
+}
+
+.customer-property-grid .property-content h4{
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+.customer-property-grid .property-info{
+    padding:8px 0;
+    margin-bottom:10px;
+}
+
+.customer-property-grid .view-btn{
+    height:38px;
+    font-size:13px;
+}
 
 }

@@ -67,7 +67,9 @@ const PropertyDetails = () => {
 
   const [sending,setSending] = useState(false);
 
-
+  const [showInquiry, setShowInquiry] = useState(
+  window.innerWidth >= 768
+);
 
 
 
@@ -160,10 +162,27 @@ const PropertyDetails = () => {
   };
 
 
+  // ===============================
+// RESPONSIVE INQUIRY ACCORDION
+// ===============================
 
+useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth >= 768) {
+      setShowInquiry(true);
+    } else {
+      setShowInquiry(false);
+    }
+  };
 
+  window.addEventListener("resize", handleResize);
 
+  handleResize();
 
+  return () => {
+    window.removeEventListener("resize", handleResize);
+  };
+}, []);
 
   useEffect(()=>{
 

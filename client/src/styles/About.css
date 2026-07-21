@@ -206,12 +206,11 @@
     font-size:15px;
     color:#6b7280;
 }
-
 /* =====================================
    RESPONSIVE
 ===================================== */
 
-@media(max-width:1100px){
+@media (max-width:1100px){
 
     .about-feature-grid{
         grid-template-columns:repeat(2,1fr);
@@ -223,7 +222,7 @@
 
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .about-hero{
         padding:110px 0 60px;
@@ -241,8 +240,15 @@
         grid-template-columns:1fr;
     }
 
+    /* 2 cards on tablet */
+    .about-feature-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+    }
+
     .about-stats-grid{
         grid-template-columns:repeat(2,1fr);
+        gap:16px;
     }
 
     .about-section-heading h2{
@@ -251,18 +257,21 @@
 
 }
 
-@media(max-width:576px){
+@media (max-width:576px){
 
     .about-hero-content h1{
         font-size:30px;
     }
 
+    /* Keep 2 cards on mobile */
     .about-feature-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
     }
 
     .about-stats-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
     }
 
     .about-section{
@@ -270,8 +279,23 @@
     }
 
     .about-info-card,
-    .about-feature-card{
-        padding:24px 20px;
+    .about-feature-card,
+    .about-stats-grid div{
+        padding:18px 14px;
+    }
+
+    .about-feature-card h3{
+        font-size:16px;
+    }
+
+    .about-feature-card p,
+    .about-stats-grid p{
+        font-size:13px;
+        line-height:1.5;
+    }
+
+    .about-stats-grid h2{
+        font-size:28px;
     }
 
 }

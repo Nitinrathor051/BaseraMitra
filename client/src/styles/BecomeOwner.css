@@ -245,86 +245,191 @@
     cursor:not-allowed;
     transform:none;
 }
+@media (max-width:1200px){
 
-/* =====================================
-   RESPONSIVE
-===================================== */
-
-@media(max-width:768px){
-
-    .owner-hero{
-        padding:110px 0 55px;
-    }
-
-    .owner-hero-content h1{
-        font-size:36px;
-    }
-
-    .owner-hero-content p{
-        font-size:15px;
-    }
-
-    .owner-card{
-        padding:22px;
-        border-radius:18px;
-    }
-
-    .owner-grid{
-        grid-template-columns:1fr;
-        gap:14px;
-    }
-
-    .owner-full{
-        grid-column:auto;
-    }
-
-    .owner-upload-box{
-        min-height:120px;
-    }
+.owner-hero{
+    padding:120px 0 60px;
 }
 
-@media(max-width:576px){
+.owner-card{
+    max-width:720px;
+}
 
-    .owner-hero-content h1{
-        font-size:30px;
-    }
+}
 
-    .owner-form-section{
-        padding:35px 0 60px;
-    }
+@media (max-width:992px){
 
-    .owner-card{
-        padding:18px;
-    }
+.owner-hero{
+    padding:105px 0 55px;
+}
 
-    .owner-form{
-        gap:18px;
-    }
+.owner-hero-content h1{
+    font-size:40px;
+}
 
-    .owner-section{
-        gap:12px;
-    }
+.owner-hero-content p{
+    font-size:15px;
+}
 
-    .owner-field input,
-    .owner-field select{
-        height:46px;
-    }
+.owner-form-section{
+    padding:40px 0 70px;
+}
 
-    .owner-field textarea{
-        min-height:80px;
-    }
+.owner-card{
+    padding:26px;
+}
 
-    .owner-upload-box{
-        min-height:110px;
-        padding:16px;
-    }
+.owner-grid{
+    gap:15px;
+}
 
-    .owner-preview{
-        width:85px;
-        height:85px;
-    }
+}
 
-    .owner-submit-btn{
-        height:48px;
-    }
+@media (max-width:768px){
+
+.owner-page{
+    overflow-x:hidden;
+}
+
+.owner-hero{
+    padding:90px 0 45px;
+}
+
+.owner-badge{
+    padding:7px 16px;
+    font-size:13px;
+}
+
+.owner-hero-content h1{
+    font-size:32px;
+}
+
+.owner-hero-content p{
+    font-size:14px;
+}
+
+.owner-form-section{
+    padding:30px 0 55px;
+}
+
+.owner-card{
+    width:100%;
+    padding:20px;
+    border-radius:18px;
+}
+
+.owner-form{
+    gap:18px;
+}
+
+.owner-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+}
+
+.owner-full{
+    grid-column:auto;
+}
+
+.owner-section h3{
+    font-size:18px;
+}
+
+.owner-field label{
+    font-size:13px;
+}
+
+.owner-field input,
+.owner-field select{
+    height:46px;
+    font-size:14px;
+}
+
+.owner-field textarea{
+    min-height:90px;
+    font-size:14px;
+}
+
+.owner-upload-box{
+    min-height:120px;
+    padding:18px;
+}
+
+.owner-preview{
+    width:90px;
+    height:90px;
+}
+
+.owner-submit-btn{
+    height:48px;
+}
+
+}
+
+@media (max-width:480px){
+
+.owner-hero{
+    padding:80px 0 38px;
+}
+
+.owner-hero-content h1{
+    font-size:28px;
+}
+
+.owner-hero-content p{
+    font-size:13px;
+    line-height:1.6;
+}
+
+.owner-form-section{
+    padding:25px 0 45px;
+}
+
+.owner-card{
+    padding:16px;
+    border-radius:16px;
+}
+
+.owner-form{
+    gap:16px;
+}
+
+.owner-section{
+    gap:10px;
+}
+
+.owner-section h3{
+    font-size:17px;
+}
+
+.owner-field input,
+.owner-field select,
+.owner-submit-btn{
+    height:44px;
+    font-size:13px;
+}
+
+.owner-field textarea{
+    min-height:80px;
+    font-size:13px;
+}
+
+.owner-upload-box{
+    min-height:110px;
+    padding:16px;
+}
+
+.owner-upload-box span{
+    font-size:14px;
+}
+
+.owner-upload-box small{
+    font-size:12px;
+}
+
+.owner-preview{
+    width:80px;
+    height:80px;
+}
+
 }

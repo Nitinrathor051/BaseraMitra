@@ -219,64 +219,132 @@
 }
 
 
+@media (max-width:1200px){
 
+.favorites-header{
+    padding:130px 0 60px;
+}
 
+.favorites-header h1{
+    font-size:40px;
+}
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-
-@media(max-width:900px){
-
-
-    .favorites-header{
-
-        padding:120px 0 50px;
-
-    }
-
-
-
-    .favorites-header h1{
-
-        font-size:36px;
-
-    }
-
-
-
-    .favorite-grid{
-
-        grid-template-columns:
-
-        repeat(2,1fr);
-
-    }
-
+.favorite-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:20px;
+}
 
 }
 
+@media (max-width:992px){
 
+.favorites-header{
+    padding:115px 0 50px;
+}
 
+.favorites-header h1{
+    font-size:34px;
+}
 
+.favorites-header p{
+    font-size:15px;
+}
 
-@media(max-width:600px){
+.favorites-section{
+    padding:40px 0 70px;
+}
 
+.favorite-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:16px;
+}
 
-    .favorites-header h1{
+.remove-favorite{
+    width:calc(100% - 20px);
+    margin:10px;
+    height:38px;
+    font-size:13px;
+}
 
-        font-size:30px;
+}
 
-    }
+@media (max-width:768px){
 
+.favorites-header{
+    padding:95px 0 40px;
+}
 
+.favorites-header h1{
+    font-size:28px;
+    gap:10px;
+}
 
-    .favorite-grid{
+.favorites-header p{
+    font-size:14px;
+}
 
-        grid-template-columns:1fr;
+.favorites-section{
+    padding:30px 0 55px;
+}
 
-    }
+.favorite-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+}
 
+.remove-favorite{
+    width:calc(100% - 16px);
+    margin:8px;
+    height:36px;
+    font-size:12px;
+}
+
+.empty-favorite{
+    padding:40px 18px;
+}
+
+.empty-favorite h2{
+    font-size:22px;
+}
+
+}
+
+@media (max-width:480px){
+
+.favorites-header{
+    padding:85px 0 30px;
+}
+
+.favorites-header h1{
+    font-size:24px;
+}
+
+.favorites-header p{
+    font-size:13px;
+}
+
+.favorite-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+.remove-favorite{
+    width:calc(100% - 14px);
+    margin:7px;
+    height:34px;
+    font-size:11px;
+}
+
+.empty-favorite{
+    padding:34px 16px;
+}
+
+.empty-favorite h2{
+    font-size:20px;
+}
+
+.empty-favorite p{
+    font-size:14px;
+}
 
 }

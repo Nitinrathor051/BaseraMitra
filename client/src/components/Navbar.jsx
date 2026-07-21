@@ -330,19 +330,6 @@ const Navbar = () => {
   </NavLink>
 
 )}
-            {/* Customer Only */}
-
-            {isAuthenticated &&
-              user?.role === "customer" && (
-                <NavLink
-                  to="/become-owner"
-                  onClick={() =>
-                    setOpen(false)
-                  }
-                >
-                  List Your Property
-                </NavLink>
-              )}
 
             {/* Customer Dashboard */}
 

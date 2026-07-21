@@ -366,52 +366,203 @@ transform:rotate(360deg);
 
 }
 
-
-/* RESPONSIVE */
-
-
-@media(max-width:768px){
-
-.add-property-page{
-
-padding:90px 15px 30px;
-
-}
-
+@media (max-width:1200px){
 
 .add-property-card{
-
-padding:18px;
+    max-width:620px;
+}
 
 }
 
+@media (max-width:992px){
+
+.add-property-page{
+    padding:90px 18px 36px;
+}
+
+.add-property-card{
+    max-width:700px;
+    padding:22px;
+}
+
+.page-header{
+    margin-bottom:18px;
+}
+
+.page-header h1{
+    font-size:26px;
+}
 
 .grid-2{
-
-grid-template-columns:1fr;
-
+    gap:12px;
 }
-
 
 .image-preview-grid{
-
-grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
+}
 
 }
 
+@media (max-width:768px){
+
+.add-property-page{
+    padding:78px 14px 24px;
+}
+
+.add-property-card{
+    max-width:100%;
+    padding:16px;
+    border-radius:16px;
+}
+
+.page-header{
+    margin-bottom:16px;
+}
+
+.page-header h1{
+    font-size:24px;
+}
+
+.page-header p{
+    font-size:13px;
+}
+
+.property-form{
+    gap:14px;
+}
+
+.form-section{
+    gap:10px;
+}
+
+.form-section h3{
+    font-size:15px;
+    padding-bottom:6px;
+}
+
+.grid-2{
+    grid-template-columns:1fr;
+    gap:10px;
+}
+
+.form-group{
+    gap:5px;
+}
+
+.form-group label{
+    font-size:12px;
+}
+
+.form-group input,
+.form-group select{
+    height:46px;
+    font-size:14px;
+}
+
+.form-group textarea{
+    min-height:80px;
+    font-size:14px;
+}
+
+.form-group input[type=file]{
+    padding:12px;
+}
+
+.image-preview-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+}
+
+.image-card img{
+    height:90px;
+}
+
+.remove-image{
+    width:24px;
+    height:24px;
+    font-size:14px;
+}
 
 .form-actions{
-
-flex-direction:column;
-
+    flex-direction:column;
+    gap:10px;
 }
-
 
 .primary-btn,
 .secondary-btn{
+    width:100%;
+    height:46px;
+}
 
-width:100%;
+}
 
+@media (max-width:480px){
+
+.add-property-page{
+    padding:72px 12px 20px;
+}
+
+.add-property-card{
+    padding:14px;
+    border-radius:14px;
+}
+
+.page-header h1{
+    font-size:22px;
+}
+
+.page-header p{
+    font-size:12px;
+}
+
+.property-form{
+    gap:12px;
+}
+
+.form-section{
+    gap:8px;
+}
+
+.form-section h3{
+    font-size:14px;
+}
+
+.form-group input,
+.form-group select{
+    height:44px;
+    padding:0 12px;
+    font-size:13px;
+}
+
+.form-group textarea{
+    min-height:75px;
+    padding:10px 12px;
+    font-size:13px;
+}
+
+.input-icon input{
+    padding-left:36px;
+}
+
+.input-icon svg{
+    left:10px;
+    width:16px;
+    height:16px;
+}
+
+.image-preview-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:6px;
+}
+
+.image-card img{
+    height:80px;
+}
+
+.primary-btn,
+.secondary-btn{
+    height:44px;
+    font-size:13px;
 }
 
 }

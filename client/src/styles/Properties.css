@@ -350,120 +350,167 @@
 }
 
 
+@media (max-width:1200px){
 
+.property-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:22px;
+}
 
+.listing-header{
+    padding:60px 20px;
+}
 
-
-
-
-
-
-/* ===============================
-   RESPONSIVE
-================================ */
-
-
-
-@media(max-width:900px){
-
-
-    .property-grid {
-
-
-        grid-template-columns:
-        repeat(2,1fr);
-
-
-    }
-
+.listing-header h1{
+    font-size:38px;
+}
 
 }
 
+@media (max-width:992px){
 
+.properties-page{
+    padding-top:75px;
+}
 
+.listing-header{
+    padding:55px 20px;
+}
 
+.listing-header h1{
+    font-size:34px;
+}
 
+.listing-header p{
+    font-size:16px;
+}
 
-@media(max-width:650px){
+.filter-section{
+    padding:28px 0;
+}
 
+.filter-box{
+    flex-direction:column;
+    align-items:stretch;
+    gap:14px;
+}
 
+.filter-btn{
+    width:100%;
+    justify-content:center;
+}
 
-    .listing-header {
+.property-section{
+    padding:28px 0 60px;
+}
 
+.listing-title{
+    margin-bottom:22px;
+}
 
-        padding:50px 15px;
+.listing-title h2{
+    font-size:28px;
+}
 
+.property-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+}
 
-    }
+}
 
+@media (max-width:768px){
 
+.properties-page{
+    padding-top:70px;
+}
 
-    .listing-header h1 {
+.listing-header{
+    padding:45px 15px;
+}
 
+.listing-header h1{
+    font-size:30px;
+}
 
-        font-size:30px;
+.listing-header p{
+    font-size:14px;
+}
 
+.filter-box{
+    padding:16px;
+}
 
-    }
+.filter-input{
+    padding:12px 14px;
+}
 
+.filter-btn{
+    height:48px;
+}
 
+.listing-title{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:6px;
+}
 
-    .filter-box {
+.listing-title h2{
+    font-size:24px;
+}
 
+.listing-title span{
+    font-size:14px;
+}
 
-        flex-direction:column;
+.property-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+}
 
+}
 
-        align-items:stretch;
+@media (max-width:480px){
 
+.container{
+    padding:0 14px;
+}
 
-    }
+.properties-page{
+    padding-top:65px;
+}
 
+.listing-header{
+    padding:40px 0;
+}
 
+.listing-header h1{
+    font-size:26px;
+}
 
-    .filter-btn {
+.listing-header p{
+    font-size:13px;
+}
 
+.filter-box{
+    padding:14px;
+}
 
-        justify-content:center;
+.filter-input{
+    padding:11px 12px;
+}
 
+.filter-input input{
+    font-size:13px;
+}
 
-    }
+.filter-btn{
+    height:46px;
+    font-size:14px;
+}
 
-
-
-    .listing-title {
-
-
-        flex-direction:column;
-
-
-        align-items:flex-start;
-
-
-        gap:8px;
-
-
-    }
-
-
-
-    .listing-title h2 {
-
-
-        font-size:24px;
-
-
-    }
-
-
-
-    .property-grid {
-
-
-        grid-template-columns:1fr;
-
-
-    }
-
+.property-grid{
+    gap:14px;
+}
 
 }

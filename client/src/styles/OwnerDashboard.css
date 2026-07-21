@@ -598,83 +598,64 @@
 
 }
 
-
-
 /* =====================================
    RESPONSIVE
 ===================================== */
 
+/* Laptop + Tablet */
 
 @media(max-width:1200px){
 
     .owner-property-grid,
     .owner-inquiry-grid{
 
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:16px;
 
     }
 
 }
 
 
+/* Mobile */
 
-@media(max-width:900px){
+@media(max-width:768px){
 
-    .owner-property-grid,
-    .owner-inquiry-grid{
+    .owner-dashboard{
 
-        grid-template-columns:repeat(2,1fr);
+        padding-top:95px;
 
     }
-
 
     .owner-dashboard-header{
 
         flex-direction:column;
-
         align-items:flex-start;
-
-        gap:15px;
-
-    }
-
-}
-
-
-
-@media(max-width:600px){
-
-    .owner-dashboard{
-
-        padding-top:90px;
+        gap:14px;
 
     }
-
 
     .owner-profile-card{
 
         flex-direction:column;
-
         align-items:flex-start;
+        padding:20px;
 
     }
-
-
-    .owner-property-grid,
-    .owner-inquiry-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
 
     .owner-block-title{
 
         flex-direction:column;
-
         align-items:flex-start;
+        gap:8px;
 
-        gap:10px;
+    }
+
+    .owner-property-grid,
+    .owner-inquiry-grid{
+
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px;
 
     }
 
