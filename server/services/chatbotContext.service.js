@@ -1,299 +1,88 @@
-import Property from "../models/Property.js";
-import Favorite from "../models/Favorite.js";
-import Inquiry from "../models/Inquiry.js";
 import User from "../models/user.js";
 
 
-
-// ===============================
-// Guest Context
-// ===============================
+// ======================================================
+// GUEST CONTEXT
+// ======================================================
 
 export const getGuestContext = async () => {
 
-
-  const properties = await Property.find({
-
-    status:"available"
-
-  })
-  .select(
-    "title city state propertyType listingType price area"
-  )
-  .limit(5);
-
-
-
   return {
 
-    role:"guest",
+    role: "guest",
 
-    access:"public",
+    authenticated: false,
 
-    properties
+    name: null,
+
+    email: null,
 
   };
-
 
 };
 
 
+// ======================================================
+// CUSTOMER CONTEXT
+// ======================================================
 
+export const getCustomerContext = async (
+  userId
+) => {
 
-
-
-
-// ===============================
-// Customer Context
-// ===============================
-
-export const getCustomerContext = async(userId)=>{
-
-
-  const user = await User.findById(userId)
-  .select(
-    "fullName email phone"
-  );
-
-
-
-
-  const favorites = await Favorite.find({
-
-    user:userId
-
-  })
-  .populate({
-
-    path:"property",
-
-    select:
-    "title city propertyType listingType price status"
-
-  })
-  .limit(5);
-
-
-
-
-
-
-  const enquiries = await Inquiry.find({
-
-    customer:userId
-
-  })
-  .populate({
-
-    path:"property",
-
-    select:
-    "title city price"
-
-  })
-  .populate({
-
-    path:"owner",
-
-    select:
-    "fullName"
-
-  })
-  .limit(5);
-
-
-
-
-
-
-
-  const publicProperties = await Property.find({
-
-    status:"available"
-
-  })
-  .select(
-
-    "title city state propertyType listingType price"
-
-  )
-  .limit(5);
-
-
-
-
-
+  const user =
+    await User.findById(userId)
+      .select("fullName email");
 
 
   return {
 
+    role: "customer",
 
-    role:"customer",
+    authenticated: true,
 
+    name:
+      user?.fullName || null,
+
+    email:
+      user?.email || null,
 
     access:
-    "public data + own customer data",
-
-
-
-    profile:{
-
-
-      name:user?.fullName,
-
-      email:user?.email
-
-    },
-
-
-
-    favorites,
-
-
-
-    enquiries,
-
-
-
-    publicProperties
-
-
+      "public + own customer features",
 
   };
-
 
 };
 
 
+// ======================================================
+// OWNER CONTEXT
+// ======================================================
 
+export const getOwnerContext = async (
+  userId
+) => {
 
-
-
-
-
-
-// ===============================
-// Owner Context
-// ===============================
-
-export const getOwnerContext = async(userId)=>{
-
-
-  const owner = await User.findById(userId)
-  .select(
-
-    "fullName email phone"
-
-  );
-
-
-
-
-
-
-
-  const myProperties = await Property.find({
-
-    owner:userId
-
-  })
-  .select(
-
-    "title city state propertyType listingType price status"
-
-  );
-
-
-
-
-
-
-
-  const myEnquiries = await Inquiry.find({
-
-    owner:userId
-
-  })
-  .populate({
-
-    path:"customer",
-
-    select:
-    "fullName email phone"
-
-  })
-  .populate({
-
-    path:"property",
-
-    select:
-    "title city price"
-
-  })
-  .limit(10);
-
-
-
-
-
-
-
-
-  const publicProperties = await Property.find({
-
-    status:"available"
-
-  })
-  .select(
-
-    "title city propertyType listingType price"
-
-  )
-  .limit(5);
-
-
-
-
-
+  const user =
+    await User.findById(userId)
+      .select("fullName email");
 
 
   return {
 
+    role: "owner",
 
+    authenticated: true,
 
-    role:"owner",
+    name:
+      user?.fullName || null,
 
+    email:
+      user?.email || null,
 
     access:
-    "public data + own properties + related customers",
-
-
-
-    owner:{
-
-
-      name:owner?.fullName,
-
-      email:owner?.email
-
-
-    },
-
-
-
-    myProperties,
-
-
-
-    receivedEnquiries:myEnquiries,
-
-
-
-    publicProperties
-
-
+      "public + own owner features",
 
   };
-
 
 };

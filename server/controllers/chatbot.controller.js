@@ -2,13 +2,11 @@ import {
   generateAIResponse
 } from "../services/groq.service.js";
 
-
 import {
   getGuestContext,
   getCustomerContext,
   getOwnerContext
 } from "../services/chatbotContext.service.js";
-
 
 import {
   guestPrompt,
@@ -17,43 +15,38 @@ import {
 } from "../prompts/chatbotPrompt.js";
 
 
-
-
-
-// ===============================
-// Chat With BaseraMitra AI
-// ===============================
+// ======================================================
+// CHAT WITH BASERAMITRA AI
+// ======================================================
 
 export const chatWithAI = async (req, res) => {
 
-
   try {
-
 
     const {
       message
     } = req.body;
 
 
-
-
-    if(!message){
-
+    if (
+      !message ||
+      !message.trim()
+    ) {
 
       return res.status(400).json({
 
-        success:false,
+        success: false,
 
-        message:"Message is required"
+        message:
+          "Message is required",
 
       });
-
 
     }
 
 
-
-
+    const userMessage =
+      message.trim();
 
 
     let prompt;
@@ -61,119 +54,85 @@ export const chatWithAI = async (req, res) => {
     let context;
 
 
+    // ==================================================
+    // GUEST
+    // ==================================================
 
+    if (!req.user) {
 
-
-
-    // ===============================
-    // Guest User
-    // ===============================
-
-
-    if(!req.user){
-
-
-      prompt = guestPrompt;
-
+      prompt =
+        guestPrompt;
 
       context =
-      await getGuestContext();
-
+        await getGuestContext();
 
     }
 
 
+    // ==================================================
+    // CUSTOMER
+    // ==================================================
 
-
-
-    // ===============================
-    // Customer User
-    // ===============================
-
-
-    else if(
+    else if (
       req.user.role === "customer"
-    ){
+    ) {
 
-
-      prompt = customerPrompt;
-
+      prompt =
+        customerPrompt;
 
       context =
-      await getCustomerContext(
-        req.user._id
-      );
-
+        await getCustomerContext(
+          req.user._id
+        );
 
     }
 
 
+    // ==================================================
+    // OWNER
+    // ==================================================
 
-
-
-
-
-    // ===============================
-    // Owner User
-    // ===============================
-
-
-    else if(
+    else if (
       req.user.role === "owner"
-    ){
+    ) {
 
-
-      prompt = ownerPrompt;
-
+      prompt =
+        ownerPrompt;
 
       context =
-      await getOwnerContext(
-        req.user._id
-      );
-
+        await getOwnerContext(
+          req.user._id
+        );
 
     }
 
 
+    // ==================================================
+    // UNKNOWN ROLE
+    // ==================================================
 
+    else {
 
-
-
-
-    else{
-
-
-      prompt = guestPrompt;
-
+      prompt =
+        guestPrompt;
 
       context =
-      await getGuestContext();
-
+        await getGuestContext();
 
     }
 
 
-
-
-
-
-
-
+    // ==================================================
+    // FINAL PROMPT
+    // ==================================================
 
     const finalPrompt = `
 
-
 ${prompt}
 
-
-
-USER QUESTION:
-
-${message}
-
-
-
-AVAILABLE CONTEXT:
+==================================
+CURRENT USER CONTEXT
+==================================
 
 ${JSON.stringify(
   context,
@@ -181,96 +140,82 @@ ${JSON.stringify(
   2
 )}
 
+==================================
+CURRENT USER MESSAGE
+==================================
 
+${userMessage}
 
-FINAL RULES:
+==================================
+FINAL OUTPUT REQUIREMENTS
+==================================
 
-- Return only valid JSON.
-- Follow given response format.
-- Keep answer 1-2 sentences only.
-- No greetings.
-- No unnecessary explanation.
-- Reply in user's language.
-- Never reveal password, OTP, token.
-- Never reveal private user data.
-- Never create fake information.
+Return ONLY valid JSON.
 
+Required structure:
 
+{
+  "message": "short one-line response",
+  "actions": []
+}
+
+IMPORTANT:
+
+- Message must be exactly ONE line.
+- Prefer 8 to 15 words.
+- Maximum 20 words whenever possible.
+- Default language is English.
+- Adapt to the user's latest language.
+- Respect the user's role.
+- Follow BaseraMitra website flow.
+- Never invent property IDs.
+- Never invent property information.
+- Never invent routes.
+- Use frontend navigation for normal property discovery.
+- Do not fetch properties for normal property search.
+- Always complete the JSON.
+- Never return markdown.
+- Never return explanations outside JSON.
 
 `;
 
 
-
-
-
-
-
     const aiResponse =
-
-    await generateAIResponse(
-
-      message,
-
-      finalPrompt
-
-    );
-
-
-
-
-
+      await generateAIResponse(
+        userMessage,
+        finalPrompt
+      );
 
 
     return res.status(200).json({
 
+      success: true,
 
-      success:true,
-
-
-      response:aiResponse
-
-
+      response:
+        aiResponse,
 
     });
 
-
-
-
-
-
-
   }
 
-  catch(error){
 
+  catch (error) {
 
-
-    console.log(
-
+    console.error(
       "Chatbot Controller Error:",
-
       error
-
     );
-
-
 
 
     return res.status(500).json({
 
+      success: false,
 
-      success:false,
-
-
-      message:error.message || "AI service failed"
-
-
+      message:
+        "AI service is temporarily unavailable.",
 
     });
 
-
-
   }
-
 
 };
